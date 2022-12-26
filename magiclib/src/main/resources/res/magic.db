@@ -1,0 +1,2611 @@
+# FILE_ID DB
+# Date:2011-04-25
+# Source:http://www.magicdb.org
+
+# Magic ID for UNIX files.
+# Submitted on 2004-11-26 by Carl Eric Codere
+0	string	TZif	[fid=000100134-90-0000000;ext=;mime=;]Time zone and daylight saving time data file (compiled)
+
+# Magic ID for Virtual Pascal files.
+# Submitted on 2004-07-30 by Carl Eric Codere
+0	string	VPI	[fid=000100137-10-0000VPI;ext=vpi;mime=;]Virtual pascal unit file
+&0x03	byte	>47	
+&0x03	byte	<58	
+
+# Magic ID for Sidplay files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	SIDPLAY\ INFOFILE	[fid=000001003-20-0000SID;ext=sid;mime=;]SIDPlayer music file
+
+# Magic ID for Dgitial Sound interface kit (DSIK) files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	RIFF	[fid=000100138-21-0000DSM;ext=dsm;mime=;]Dgitial Sound interface kit module music file
+&8	string	DSMF	
+
+# Magic ID for Delusion Xtracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	DDMF	[fid=000000000-21-0000DMF;ext=dmf;mime=;]Delusion tracker module music file
+>4	byte	x	, version %d.0
+>13	string	>\0	[title=%.30s]
+>43	string	>\0	[creator=%.20s]
+
+# Magic ID for Reality Adlib tracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	RAD\ by	[fid=000001336-21-0000RAD;ext=rad;mime=;]Reality Adlib tracker music file
+
+# Magic ID for Sndtool2,nezplay files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	SND\x1A	[fid=000000000-21-0000SND;ext=snd;mime=;]Nintendo Entertainment System audio file (NES)
+&4	byte	3	, version %3.0
+>5	byte	x	[chn=%d]
+
+# Magic ID for PlaySID, Sidplay files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	PSID	[fid=000000000-21-0000SID;ext=sid;mime=;]PlaySID music file
+>16	string	x	[title=%.20s]
+>36	string	x	[creator=%.20s]
+
+# Magic ID for Polytracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+44	string	PTMF	[fid=000000000-21-0000PTM;ext=ptm;mime=;]Poly Tracker module music file
+>38	leshort	>0	[chn=%d]
+>0	string	>\0	[title=%.28s]
+
+# Magic ID for Jamcracker files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	BeEp	[fid=000000000-21-0000JAM;ext=jam;mime=;]Jamcracker tracker module music file
+
+# Magic ID for APlayer files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	APUN\x01	[fid=000000000-21-0000UNI;ext=uni;mime=;]APlayer module music file
+
+# Magic ID for Mikmod files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	UN0	[fid=000000000-21-0000UNI;ext=uni;mime=;]Mikmod module music file
+>4	byte	x	[chn=%d]
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	RIF	[fid=000000000-21-0000RMI;ext=rmi;mime=application/vnd.music-niff;]Notation interchange (NIFF) file
+&8	string	NIFF	
+>3	string	F	, little-endian
+>3	string	X	, big-endian
+
+# Magic ID for MAUD files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	FORM	[fid=000000000-22-000MAUD;ext=maud;mime=;]MAUD audio sample file
+&4	string	MAUD	
+
+# Submitted on 2004-05-18 by Carl Eric Codere
+0	string	Speex	[fid=000100140-22-00SPEEX;ext=spx;mime=;]Speex Lossy Audio Codec raw audio file
+
+# Submitted on 2004-05-18 by Carl Eric Codere
+0	string	vorbis	[fid=000100141-22-0VORBIS;ext=vorbis;mime=;]Vorbis Lossy Audio Codec raw audio file
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	This\ is\ a\ BitMap\ file	[fid=000000000-31-000LISP;ext=lisp;mime=;]Lisp machine format image file
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	\117\072	[fid=000000000-31-0000SIR;ext=sir;mime=;]Solitaire image recorder image file, MGI type 11
+&4	string	\013	
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	\117\072	[fid=000000000-31-0000SIR;ext=sir;mime=;]Solitaire image recorder image file, MGI type 17
+&4	string	\021	
+
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	\x8bJNG\x0d\x0a\x1a\x0a	[fid=000000000-31-0000JNG;ext=jng;mime=;]JPEG Network graphics (JNG) image file
+&12	string	JHDR	
+>16	belong	x	[res=%d
+>20	belong	x	x%d]
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+72	string	S\ \ \ \ \ \ 1	[fid=000100143-40-000IGES;ext=iges,igs;mime=;]Initial Graphics Exchange Specification image file (IGES)
+72	string	S0000001	[fid=000100143-40-000IGES;ext=iges,igs;mime=;]Initial Graphics Exchange Specification image file (IGES)
+
+# Magic ID for Sculpt 3d files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	FORM	[fid=000000000-40-00SCENE;ext=scene;mime=;]Sculpt 3d scene model
+&8	string	SC3D	
+
+# Magic ID for AC3d files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	AC3D	[fid=000000000-40-00000AC;ext=ac;mime=;]Ac3d 3d model
+
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	<WORLD>	[fid=000000000-40-0000XGL;ext=xgl;mime=;]XGL 3d model
+
+# Magic ID for Kaboom files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\xA8MP\xA8	[fid=000000000-50-0000000;ext=;mime=;]Kboom archive file
+
+# Magic ID for Akt archiver files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	AKT\x0A	[fid=000000000-50-0000AKT;ext=akt;mime=;]AKT archive file
+
+# Magic ID for DAXWav files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	FORM	[fid=000000000-50-0000DAX;ext=dax;mime=;]DAX audio archive file
+&8	string	daxA	
+
+# Submitted on 2004-02-10 by Carl Eric Codere
+10	string	#\ This\ is\ a\ shell\ archive	[fid=000000000-50-000SHAR;ext=shar;mime=;]UNIX shell archive
+
+# Submitted on 2004-02-10 by Carl Eric Codere
+11	string	#\ This\ is\ a\ shell\ archive	[fid=000000000-50-000SHAR;ext=shar;mime=;]UNIX shell archive
+
+# Magic ID for Sof files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	PK\x03\x06	[fid=000000000-50-0000SOF;ext=sof;mime=;]SOF archive file
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\037\235	[fid=000000000-50-000000Z;ext=z;mime=;]UNIX archive file
+
+# Magic ID for Ai Archiver files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	Ai	[fid=000000000-50-00000AI;ext=ai;mime=;]Ai archive file
+
+# Magic ID for Diskmasher files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	DMS!	[fid=000000000-50-0000DMS;ext=dms;mime=;]Diskmasher archive file
+
+# Magic ID for RPM files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	\xed\xab\xee\xdb	[fid=000000000-50-0000RPM;ext=rpm;mime=;]RPM archive
+>4	byte	x	, version %d
+>5	byte	x	.%d
+
+# Magic ID for Freeze files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\x1F\x9E	[fid=000000000-50-000000F;ext=f;mime=;]Freeze archive file, version 1.0
+
+# Magic ID for Freeze files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\x1F\x9F	[fid=000000000-50-000000F;ext=f;mime=;]Freeze archive file, version 2.0
+
+# Magic ID for Tar,pax files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+257	string	ustar\040\040\0	[fid=000000000-50-0000TAR;ext=tar;mime=;]GNU Tape archive (TAR) file
+
+# Magic ID for X-Windows files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+0	belong	0x01666370	[fid=000000000-70-0000PCF;ext=pcf;mime=;]Portable compiled format (PCF) font file
+
+# Magic ID for Vivo player files.
+# Submitted on 2004-05-20 by Carl Eric Codere
+5	string	Version:Vivo	[fid=000000000-81-000VIVO;ext=viv,vivo;mime=video/vnd.vivo;]Vivo multimedia stream file
+
+# Submitted on 2004-05-18 by Carl Eric Codere
+0	string	OggS	[fid=000000000-81-0000OGG;ext=ogg;mime=application/ogg;]OGG Multimedia container transport stream file
+
+# Magic ID for Cyberpaint files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	beshort	0xFEDB	[fid=000000000-82-0000SEQ;ext=seq;mime=;]Cyberpaint Animation Sequence
+&2	beshort	0x0000	
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	\x8AMNG\x0d\x0A\x1A\x0A	[fid=000000000-82-0000MNG;ext=mng;mime=;]Multiple image network graphics (MNG) animation file
+>0x10	belong	x	[res=%dx
+>0x14	belong	x	%d]
+
+# Submitted on 2004-05-04 by Carl Eric Codere
+0	beshort&0xFFE0	0xffe0	[fid=000000001-22-0011172;ext=mp1,mp2,mp3;mime=audio/mpeg;]MPEG Audio stream (MP3) file
+&-128	string	TAG	
+>-125	string	x	[title=%.30s]
+>-95	string	x	[creator=%.30s]
+
+# Submitted on 2004-05-04 by Carl Eric Codere
+0	string	ID3	[fid=000000001-22-0011172;ext=mp1,mp2,mp3;mime=audio/mpeg;]MPEG Audio stream (MP3) file
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	\xff\x4f\xff\x51	[fid=000000001-31-0015444;ext=jpc;mime=;]JPEG 2000 code stream image file
+&-2	beshort	0xFFD9	
+>8	belong	x	[res=%dx
+>12	belong	x	%d]
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	\x00\x00\x00\x0cjP\x20\x20	[fid=000000001-31-0015444;ext=jp2;mime=image/jp2;]JPEG 2000 file stream image file
+
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	\x89PNG\x0d\x0a\x1a\x0a	[fid=000000001-31-0015948;ext=png;mime=image/png;]Portable Network Graphic (PNG) image file
+&12	string	IHDR	
+>16	belong	>0	[res=%d
+>20	belong	>0	x%d
+>24	byte	x	x%dbpp]
+
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	beshort&0xFF20	0x0020	[fid=000000001-33-0008632;ext=cgm;mime=image/cgm;]Computer graphics metafile (CGM), binary encoded
+&-2	beshort&0xFF40	0x0040	
+
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	string	BEGMF	[fid=000000001-33-0008632;ext=cgm;mime=image/cgm;]Computer graphics metafile (CGM), ascii encoded
+
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	#VRML	[fid=000000001-40-0014772;ext=wrl;mime=model/vrml;]Virtual Reality modeling language (VRML) file
+>7	string	x	, version %.1s.
+>9	string	x	%.1s
+
+# Submitted on 2004-10-08 by Carl Eric Codere
+0	string	<!DOCTYPE\ 	[fid=000000001-60-0015445;ext=html,htm;mime=text/html;]HyperText Markup Language document (HTML) file
+&10	string/c	html	
+
+# Magic ID for Adobe Acrobat files.
+# Submitted on 2004-10-08 by Carl Eric Codere
+0	string	%PDF-	[fid=000000001-60-0015930;ext=pdf;mime=application/pdf;]Portable document format document file (PDF)
+>5	string	x	, version %.1s
+>7	string	x	.%.1s
+
+# Magic ID for DocBook files.
+# Submitted on 2004-10-08 by Carl Eric Codere
+0	string	<!DOCTYPE\ 	[fid=000000001-60-0008879;ext=sgml,sgm;mime=text/sgml;]Standard general markup language document (SGML) file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	%!FontType1	[fid=000000001-70-0009541;ext=pfa;mime=;]Type 1 font file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	%!PS-AdobeFont-1.0	[fid=000000001-70-0009541;ext=pfa;mime=;]Type 1 font file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	belong	0x1B3	[fid=000000001-81-000MPEG;ext=mpe,mpeg,mpg;mime=video/mpeg;]MPEG multimedia (audio/video) stream file
+&-4	belong	0x01B9	
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	belong	0x1BA	[fid=000000001-81-000MPEG;ext=mpe,mpeg,mpg;mime=video/mpeg;]MPEG multimedia (audio/video) stream file
+&-4	belong	0x01B9	
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	belong	0x1E0	[fid=000000001-81-000MPEG;ext=mpe,mpeg,mpg;mime=video/mpeg;]MPEG multimedia (audio/video) stream file
+&-4	belong	0x01B9	
+
+# Magic ID for Gzip files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\x1F\x8B	[fid=000000002-50-0001952;ext=gz;mime=;]Gzip archive file
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\x7fELF	[fid=000000003-10-000000O;ext=,o,so,out;mime=;]Executable and linkable file format (ELF)
+&4	byte	1	, 32-bit
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\x7fELF	[fid=000000003-10-000000O;ext=,o,so,out;mime=;]Executable and linkable file format (ELF)
+&4	byte	2	, 64-bit
+
+# Magic ID for ar files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	\x21<arch>\x0A	[fid=000000003-50-00000AR;ext=ar;mime=;]UNIX archive file (ar)
+
+# Magic ID for Tar,pax files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+257	string	ustar\0\x06	[fid=000000003-50-0001003;ext=tar;mime=;]Opengroup/POSIX Tape archive (TAR) file
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+128	string	DICM	[fid=000000004-31-000DICM;ext=dicm,dcm;mime=;]Digital imaging and communication in medecine img.
+
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	\xff\xd8\xff\xe1	[fid=000000005-31-000JPEG;ext=jpg,jpeg;mime=image/jpeg;]Digital still camera image file (EXIF)
+&6	string	Exif	
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	x00x00x00x3Cx00x00x00x3F	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-32BE encoded
+&8	belong	0x00000078	
+&12	belong	0x0000006d	
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	x00x00xfexffx00x00x00x3C	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-32BE encoded
+&8	belong	0x0000003F	
+&12	belong	0x00000078	
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	x00x3Cx00x3Fx00x78x00x6Dx00x6c	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-16BE encoded
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	\x3C\x00\x00\x00\x3F\x00\x00\x00	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-32LE encoded
+&8	beshort	0x00000078	
+&12	beshort	0x0000006d	
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	\x3C\x00\x3F\x00\x78\x00\x6D\x00\x6c\x00	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-16LE encoded
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	\xef\xbb\xbf<?xml	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-8 encoded
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	\xfe\xff\x00\x3C\x00\x3F\x00\x78\x00\x6D	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-16BE encoded
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	\xff\xfe\x00\x00\x3C\x00\x00\x00	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-32LE encoded
+&8	beshort	0x3F000000	
+&12	beshort	0x78000000	
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	\xff\xfe\x3C\x00\x3F\x00\x78\x00\x6D\x00	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file, UTF-16LE encoded
+
+# Submitted on 2004-05-17 by Carl Eric Codere
+0	string	<?xml	[fid=000000007-F3-0000XML;ext=xml;mime=text/xml;]Extensible Markup language (XML) file
+
+# Magic ID for Quicken,Money files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+0	string	OFXHEADER:	[fid=000000008-91-0000QFX;ext=qfx;mime=;]Open financial exchange file (SGML)
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	PMCC	[fid=000001001-00-0000GRP;ext=grp;mime=;]Microsoft windows group file
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	lelong	0x0000004C	[fid=000001001-00-0000LNK;ext=lnk;mime=;]Microsoft Windows shortcut file
+&4	string	\x01\x14\x02	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFF	[fid=000001001-00-0000CON;ext=con;mime=;]Microsoft Animated cursor, little-endian
+&8	string	ACON	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFX	[fid=000001001-00-0000CON;ext=con;mime=;]Microsoft Animated cursor, big-endian
+&8	string	ACON	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	RIFF	[fid=000001001-0E-0000PAL;ext=pal,riff;mime=;]Microsoft Palette, little-endian
+&8	string	PAL	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	RIFX	[fid=000001001-0E-0000PAL;ext=pal,rifx;mime=;]Microsoft Palette, big-endian
+&8	string	PAL	
+
+# Magic ID for Virtual PC files.
+# Submitted on 2004-10-29 by Carl Eric Codere
+0	string	conectix	[fid=000001001-0F-0000VHD;ext=vhd;mime=;]Virtual PC Hard drive
+
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	MZ	[fid=000001001-10-0000EXE;ext=exe,dll;mime=;]New executable file
+&0x18	leshort	>0x3F	
+&(60.l)	string	NE	
+
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	ZM	[fid=000001001-10-0000EXE;ext=exe,dll;mime=;]New executable file
+&0x18	leshort	>0x3F	
+&(60.l)	string	NE	
+
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	MZ	[fid=000001001-10-0000EXE;ext=exe,dll;mime=;]Microsoft Windows 3.x New Executable file
+&0x18	leshort	>0x3F	
+&(60.l)	string	NE	
+&(60.l+54)	byte	0x02	
+
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	ZM	[fid=000001001-10-0000EXE;ext=exe,dll;mime=;]Microsoft Windows 3.x New Executable file
+&0x18	leshort	>0x3F	
+&(60.l)	string	NE	
+&(60.l+54)	byte	0x02	
+
+# Magic ID for Microsoft Windows,DOS4GW files.
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	MZ	[fid=000001001-10-0000EXE;ext=exe,dll,drv;mime=;]Microsoft Windows Linear executable
+&0x18	leshort	>0x3F	
+&(60.l)	string	LE	
+
+# Magic ID for Microsoft Windows,DOS4GW files.
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	ZM	[fid=000001001-10-0000EXE;ext=exe,dll,drv;mime=;]Microsoft Windows Linear executable
+&0x18	leshort	>0x3F	
+&(60.l)	string	LE	
+
+# Submitted on 2004-07-30 by Carl Eric Codere
+0	string	MSFT	[fid=000001001-10-0000TLB;ext=tlb;mime=;]Microsoft component type library
+
+# Magic ID for Microsoft Windows files.
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	MZ	[fid=000001001-10-0000EXE;ext=exe,dll;mime=;]Microsoft Windows NT Portable Executable (PE) file
+&0x18	leshort	0x40	
+&(60.l)	string	PE\x00\x00	
+
+# Magic ID for Microsoft Windows files.
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	ZM	[fid=000001001-10-0000EXE;ext=exe,dll;mime=;]Microsoft Windows NT Portable Executable (PE) file
+&0x18	leshort	0x40	
+&(60.l)	string	PE\x00\x00	
+
+# Magic ID for Microsoft Instrument Definition file files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	RIFF	[fid=000001001-20-0000IDF;ext=idf;mime=;]Microsoft instrument definition file, little-endian
+&8	string	IDF\ 	
+
+# Magic ID for Microsoft Instrument Definition file files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	RIFX	[fid=000001001-20-0000IDF;ext=idf;mime=;]Microsoft instrument definition file, big-endian
+&8	string	IDF\ 	
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	RIFF	[fid=000001001-21-0000RMI;ext=;mime=;]MIDI music file, little-endian
+&8	string	RMID	
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	RIFX	[fid=000001001-21-0000RMI;ext=;mime=;]MIDI music file, big-endian
+&8	string	RMID	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFF	[fid=000001001-22-0000WAV;ext=wav;mime=;]Microsoft Waveform Audio file, little-endian
+&8	string	WAVE	
+>24	lelong	>0	[freq=%d]
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFX	[fid=000001001-22-0000WAV;ext=wav;mime=;]Microsoft Waveform Audio file, big-endian
+&8	string	WAVE	
+>24	belong	>0	[freq=%d]
+
+# Magic ID for Windows Cursor files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x02\x00	[fid=000001001-31-0000CUR;ext=cur;mime=;]Microsoft windows cursor image file
+&0x08	byte	0	
+>4	leshort	x	, %d cursor(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx8bpp]
+
+# Magic ID for Windows Cursor files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x02\x00	[fid=000001001-31-0000CUR;ext=cur;mime=;]Microsoft windows cursor image file
+&0x08	byte	16	
+>4	leshort	x	, %d cursor(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx4bpp]
+
+# Magic ID for Windows Cursor files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x02\x00	[fid=000001001-31-0000CUR;ext=cur;mime=;]Microsoft windows cursor image file
+&0x08	byte	2	
+>4	leshort	x	, %d cursor(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx1bpp]
+
+# Magic ID for Windows Cursor files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x02\x00	[fid=000001001-31-0000CUR;ext=cur;mime=;]Microsoft windows cursor image file
+&0x08	byte	32	
+>4	leshort	x	, %d cursor(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx5bpp]
+
+# Magic ID for Windows Cursor files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x02\x00	[fid=000001001-31-0000CUR;ext=cur;mime=;]Microsoft windows cursor image file
+&0x08	byte	64	
+>4	leshort	x	, %d cursor(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx6bpp]
+
+# Magic ID for Windows Cursor files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x02\x00	[fid=000001001-31-0000CUR;ext=cur;mime=;]Microsoft windows cursor image file
+&0x08	byte	8	
+>4	leshort	x	, %d cursor(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx3bpp]
+
+# Magic ID for Windows Icon files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x01\x00	[fid=000001001-31-0000ICO;ext=ico;mime=image/vnd.microsoft.icon;]Microsoft windows Icon image file
+&0x08	byte	0	
+>4	leshort	x	, %d icon(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx8bpp]
+
+# Magic ID for Windows Icon files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x01\x00	[fid=000001001-31-0000ICO;ext=ico;mime=image/vnd.microsoft.icon;]Microsoft windows Icon image file
+&0x08	byte	16	
+>4	leshort	x	, %d icon(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx4bpp]
+
+# Magic ID for Windows Icon files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x01\x00	[fid=000001001-31-0000ICO;ext=ico;mime=image/vnd.microsoft.icon;]Microsoft windows Icon image file
+&0x08	byte	2	
+>4	leshort	x	, %d icon(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx1bpp]
+
+# Magic ID for Windows Icon files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x01\x00	[fid=000001001-31-0000ICO;ext=ico;mime=image/vnd.microsoft.icon;]Microsoft windows Icon image file
+&0x08	byte	32	
+>4	leshort	x	, %d icon(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx5bpp]
+
+# Magic ID for Windows Icon files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x01\x00	[fid=000001001-31-0000ICO;ext=ico;mime=image/vnd.microsoft.icon;]Microsoft windows Icon image file
+&0x08	byte	64	
+>4	leshort	x	, %d icon(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx6bpp]
+
+# Magic ID for Windows Icon files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\x00\x00\x01\x00	[fid=000001001-31-0000ICO;ext=ico;mime=image/vnd.microsoft.icon;]Microsoft windows Icon image file
+&0x08	byte	8	
+>4	leshort	x	, %d icon(s)
+>6	byte	x	[res=%dx
+>7	byte	x	%dx3bpp]
+
+# Magic ID for Microsoft Paint files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	leshort	0x6144	[fid=000001001-31-0000MSP;ext=msp;mime=;]Microsoft paint image file, version 1.0
+&2	leshort	0x4d6e	
+>4	leshort	x	[res=%dx
+>6	leshort	x	%dx1bpp]
+
+# Magic ID for Microsoft Paint files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	leshort	0x694c	[fid=000001001-31-0000MSP;ext=msp;mime=;]Microsoft paint image file, version 2.0
+&2	leshort	0x536e	
+>4	leshort	x	[res=%dx
+>6	leshort	x	%dx1bpp]
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	BM	[fid=000001001-31-0000BMP;ext=bmp;mime=;]Windows or OS/2 Bitmap image file
+&6	lelong	0	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	lelong	0x00000001	[fid=000001001-33-0000EMF;ext=emf;mime=;]Microsoft Windows Enhanced metafile
+&40	lelong	0x464D4520	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	leshort	0x0001	[fid=000001001-33-0000WMF;ext=wmf;mime=;]Microsoft Windows metafile
+&2	leshort	9	
+
+# Magic ID for Direct3D files.
+# Submitted on 2004-04-11 by Carl Eric Codere
+0	string	xof\ 	[fid=000001001-40-0000XIE;ext=xie;mime=;]Microsoft direct3d 3D model
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	MSCF	[fid=000001001-50-0000CAB;ext=cab;mime=;]Microsoft Cabinet file
+>25	byte	x	, version %d.
+>24	byte	x	%d
+
+# Magic ID for Microsoft Compress files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	SZDD\x88\xF0\x27\x33	[fid=000001001-50-0000000;ext=;mime=;]Microsoft LZSS compressed file
+
+# Magic ID for HTML Help Workshop files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	ITSF	[fid=000001001-60-0000CHM;ext=chm;mime=;]Microsoft compiled hypertext document
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	lelong	0x00035F3F	[fid=000001001-60-0000HLP;ext=hlp;mime=;]Microsoft Windows Help file
+
+# Magic ID for Microsoft Write files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	leshort	0xBE31	[fid=000001001-60-0000WRI;ext=wri;mime=;]Microsoft Write document
+&2	leshort	0x0000	
+
+# Magic ID for Microsoft Write files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	leshort	0xBE32	[fid=000001001-60-0000WRI;ext=wri;mime=;]Microsoft Write document
+&2	leshort	0x0000	
+
+# Magic ID for Microsoft Wordpad files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	{\\rtf	[fid=000001001-60-0000RTF;ext=rtf;mime=text/rtf;]Rich Text Format document
+>5	string	x	, version %.1s.x
+
+# Magic ID for MS-DOS files.
+# Submitted on 2004-11-26 by Carl Eric Codere
+0	string	\xFFFONT	[fid=000001001-70-0000CPI;ext=cpi;mime=;]MS-DOS code page raster font
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	leshort	0x0100	[fid=000001001-70-0000PFM;ext=pfm;mime=;]Printer Font Metrics file for Type 1 fonts
+&66	leshort	0x0081	
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	belong	0x00010000	[fid=000001001-70-0000TTF;ext=otf,ttf;mime=;]Opentype font file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	OTTO	[fid=000001001-70-0000TTF;ext=otf,ttf;mime=;]Opentype font file, CFF type
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	lelong	0x75B22630	[fid=000001001-81-0000ASF;ext=asf,wma,wmv;mime=;]Microsoft Advanced Streaming format multimedia file
+&6	leshort	0x11CF	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	RIFF	[fid=000001001-81-0000AVI;ext=avi;mime=;]Audio-video interleaved movie (AVI), little-endian
+&8	string	AVI\ 	
+
+# Submitted on 2004-02-13 by Carl Eric Codere
+0	string	RIFX	[fid=000001001-81-0000AVI;ext=avi;mime=;]Audio-video interleaved movie (AVI), big-endian
+&8	string	AVI\ 	
+
+# Magic ID for Microsoft Visual C++ files.
+# Submitted on 2005-03-04 by Carl Eric Codere
+0	string	Microsoft\ Linker\ Database\x0A\x07\x1A	[fid=000001001-90-0000ILK;ext=ilk;mime=;]Microsoft Visual C++ linker database
+
+# Magic ID for Microsoft Visual C++ files.
+# Submitted on 2005-03-04 by Carl Eric Codere
+0	string	VCPCH0\x00\x00	[fid=000001001-90-0000PCH;ext=pch;mime=;]Microsoft Visual C++ pre-compiled header(s)
+
+# Magic ID for Microsoft Visual C++ files.
+# Submitted on 2005-03-04 by Carl Eric Codere
+0	string	Microsoft\ C/C++\ program\ database	[fid=000001001-90-0000PDB;ext=pdb;mime=;]Microsoft Visual C++ debug information database
+&0x25	string	\x0D\x0A\x1A	
+&0x28	string	JG\x00	
+
+# Magic ID for Microsoft Internet Explorer files.
+# Submitted on 2006-08-10 by Carl Eric Codere
+0	string	[InternetShortcut]	[fid=000001001-A0-0000URL;ext=url;mime=;]Microsft Internet Exprloer URL Shortcut
+
+# Magic ID for Windows Media Player files.
+# Submitted on 2006-08-10 by Carl Eric Codere
+0	string	<?wpl	[fid=000001001-A0-0000WPL;ext=wpl;mime=;]Windows Media Player auto-playlist
+
+# Magic ID for Windows Media Player files.
+# Submitted on 2005-12-18 by Carl Eric Codere
+0	string	\<ASX	[fid=000001001-A0-0000ASX;ext=asx;mime=;]Windows Media player play list file
+
+# Magic ID for Cardfile files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RRG	[fid=000001001-B0-0000CRD;ext=crd;mime=;]Windows 3.x card file
+
+# Magic ID for Cardfile files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	MGC	[fid=000001001-B0-0000CRD;ext=crd;mime=;]Windows 3.x card file
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xb5\xa2\xb0\xb3\xb3\xb0\xa2\xb5	[fid=000001001-B1-0000CAL;ext=cal;mime=;]Microsoft windows calendar file
+
+# Submitted on 2004-04-20 by Carl Eric Codere
+0	string	\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1	[fid=000001001-F4-0000OLE;ext=ole;mime=;]Microsoft OLE Structured Compound file, big-endian
+&0x1C	leshort	!0xFFFE	
+
+# Submitted on 2004-04-20 by Carl Eric Codere
+0	string	\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1	[fid=000001001-F4-0000OLE;ext=ole;mime=;]Microsoft OLE Structured Compound file, little-endian
+&0x1C	leshort	0xFFFE	
+>0x1A	leshort	x	, version %d
+>0x18	leshort	x	.%d
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	FORM	[fid=000001002-22-000AIFC;ext=aifc,aif;mime=;]Audio Compressed Interchange File Format
+&8	string	AIFC	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	FORM	[fid=000001002-22-000AIFF;ext=aiff,aif;mime=;]Audio Interchange File Format
+&8	string	AIFF	
+
+# Magic ID for Quickdraw files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0x20A	belong	0x001102FF	[fid=000001002-33-0000PCT;ext=pct;mime=;]Macintosh Quickdraw metafile 'PICT', version 2.0
+
+# Magic ID for Quickdraw 3D files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	3DMF	[fid=000001002-40-0003DMF;ext=3dmf;mime=;]Apple Quickdraw 3D metafile
+
+# Magic ID for Quickdraw 3D files.
+# Submitted on 2004-04-11 by Carl Eric Codere
+0	string	3DMetafile	[fid=000001002-40-0003DMF;ext=3dmf,a3d;mime=;]Apple Quickdraw 3D metafile
+
+# Submitted on 2004-02-10 by Carl Eric Codere
+11	string	must\ be\ converted\ with\ BinHex	[fid=000001002-50-0000HQX;ext=hqx;mime=;]BinHex archive
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	true	[fid=000001002-70-0000TTF;ext=ttf;mime=;]Truetype font file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	typ1	[fid=000001002-70-0000TTF;ext=ttf;mime=;]Truetype font file
+
+# Magic ID for Quicktime files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+4	string	mdat	[fid=000001002-81-0000MOV;ext=mov,qt;mime=video/quicktime;]Apple QuickTime movie data (mdat)
+
+# Magic ID for Quicktime files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+4	string	moov	[fid=000001002-81-0000MOV;ext=mov,qt;mime=video/quicktime;]Apple QuickTime movie resource (moov)
+
+# Magic ID for Photoshop files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	8BPS\x00\x01	[fid=000001003-31-0000PSD;ext=psd;mime=;]Adobe Photoshop image file
+>18	belong	>0	[res=%dx
+>14	belong	>0	%d]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	II	[fid=000001003-31-0000TIF;ext=tif,tiff,dng;mime=image/tiff;]Tagged interchange file format (TIFF)  image file, little-endia
+&2	leshort	42	
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	MM	[fid=000001003-31-0000TIF;ext=tif,tiff,dng;mime=image/tiff;]Tagged interchange file format (TIFF)  image file,big-endian
+&2	beshort	42	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	lelong	0x9AC6CDD7	[fid=000001003-33-0000APM;ext=apm;mime=;]Aldus placeable Windows metafile
+&4	leshort	0	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	%!PS-Adobe-2.0\ EPSF-1.2	[fid=000001003-33-000EPSF;ext=epsf;mime=application/postscript;]Adobe Encapsulated Postscript Level 2, version 1.2
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	%!PS-Adobe-2.0\ EPSF-2.0	[fid=000001003-33-000EPSF;ext=epsf;mime=application/postscript;]Adobe Encapsulated Postscript Level 2, version 2.0
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	%!PS-Adobe-3.0\ EPSF-3.0	[fid=000001003-33-000EPSF;ext=epsf;mime=application/postscript;]Adobe Encapsulated Postscript Level 3, version 3.0
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\xC5\xD0\xD3\xC6	[fid=000001003-33-000EPSF;ext=epsf,ai;mime=application/postscript;]Adobe Encapsulated Postscript, version 3.0, binary
+
+# Submitted on 2004-11-12 by Carl Eric Codere
+0	string	%!PS-Adobe-	[fid=000001003-33-00000PS;ext=ps,eps;mime=application/postscript;]Postscript file
+>11	string	x	, level %.1s
+>13	string	x	.%.1s
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	StartCompFontMetrics	[fid=000001003-70-0000AFM;ext=afm;mime=;]Adobe composite font metrics file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	StartFontMetrics	[fid=000001003-70-0000AFM;ext=afm;mime=;]Adobe font metrics file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	StartMasterFontMetrics	[fid=000001003-70-0000AFM;ext=afm;mime=;]Adobe master font metrics file
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+6	string	%!FontType1	[fid=000001003-70-0000PFB;ext=pfb;mime=;]Type 1 printer font binary file
+&0	byte	0x80	
+
+# Submitted on 2004-05-20 by Carl Eric Codere
+6	string	%!PS-AdobeFont-1.0	[fid=000001003-70-0000PFB;ext=pfb;mime=;]Type 1 printer font binary file
+&0	byte	0x80	
+
+# Magic ID for X-Windows files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+0	string	STARTFONT\ 	[fid=000001003-70-0000BDF;ext=bdf;mime=;]Adobe glyph bitmap distribution format font file
+
+# Submitted on 2004-11-26 by Carl Eric Codere
+0x28	string	<x:xmpmeta\ 	[fid=000001003-A0-0000XMP;ext=xml,xmp;mime=text/xml;]Extensible metadata platform sidecar file (XML)
+&0	string	<?xml	
+
+# Submitted on 2004-11-26 by Carl Eric Codere
+0x29	string	<x:xmpmeta\ 	[fid=000001003-A0-0000XMP;ext=xml,xmp;mime=text/xml;]Extensible metadata platform sidecar file (XML)
+&0	string	<?xml	
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file
+>24	string	>\x00	[title=%.80s]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA\x00\x01	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file
+&10	beshort	1	
+>6	beshort	x	[res=%dx
+>8	beshort	x	%dx8bpp]
+>24	string	>\x00	[title=%.80s]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA\x00\x01	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file
+&10	beshort	3	
+>6	beshort	x	[res=%dx
+>8	beshort	x	%dx24bpp]
+>24	string	>\x00	[title=%.80s]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA\x00\x01	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file
+&10	beshort	4	
+>6	beshort	x	[res=%dx
+>8	beshort	x	%dx24bpp]
+>24	string	>\x00	[title=%.80s]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA\x01\x01	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file, compressed
+&10	beshort	1	
+>6	beshort	x	[res=%dx
+>8	beshort	x	%dx8bpp]
+>24	string	>\x00	[title=%.80s]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA\x01\x01	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file, compressed
+&10	beshort	3	
+>6	beshort	x	[res=%dx
+>8	beshort	x	%dx24bpp]
+>24	string	>\x00	[title=%.80s]
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	\x01\xDA\x01\x01	[fid=000001004-31-0000RGB;ext=rgb;mime=;]SGI Image file, compressed
+&10	beshort	4	
+>6	beshort	x	[res=%dx
+>8	beshort	x	%dx24bpp]
+>24	string	>\x00	[title=%.80s]
+
+# Magic ID for Open Inventor Toolkit files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	#Inventor	[fid=000001004-40-00000IV;ext=iv;mime=;]Open Inventor 3d model
+>11	string	x	, version %.1s.
+>13	string	x	%.1s
+>15	string	binary	, binary encoded
+>15	string	ascii	, ascii encoded
+
+# Magic ID for Alias/Wavefront files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	MOVI	[fid=000001004-81-00000MV;ext=mv;mime=;]Alias/Wavefront movie file
+
+# Magic ID for Borland Delphi files.
+# Submitted on 2004-07-30 by Carl Eric Codere
+0	string	PKG	[fid=000001005-11-0000DCP;ext=dcp;mime=;]Borland Delphi compiled package code file
+&0x03	byte	>47	
+&0x03	byte	<58	
+
+# Magic ID for Turbo Pascal files.
+# Submitted on 2004-07-29 by Carl Eric Codere
+0	string	TPU9	[fid=000001005-11-0000TPU;ext=tpu;mime=;]Turbo Pascal 6.0 code unit file
+
+# Magic ID for Turbo Pascal, Borland Pascal files.
+# Submitted on 2004-07-29 by Carl Eric Codere
+0	string	TPUQ	[fid=000001005-11-0000TPU;ext=tpu,tpp,tpw;mime=;]Borland Pascal 7.0 code unit file
+
+# Magic ID for Borland Delphi files.
+# Submitted on 2004-07-30 by Carl Eric Codere
+0	string	\xDF\x00\x00\x0F	[fid=000001005-11-0000DCU;ext=dcu;mime=;]Borland Delphi code unit file
+
+# Magic ID for Borland Delphi files.
+# Submitted on 2004-07-30 by Carl Eric Codere
+2	string	DELPHI.DIAGRAM.PORTFOLIO	[fid=000001005-60-0000DDP;ext=ddp;mime=;]Delphi Diagram Portfolio file
+
+# Magic ID for Turbo C files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	TURBO\ C\ HELP\ FILE\x00	[fid=000001005-60-0000TCH;ext=tch;mime=;]Turbo C help file
+
+# Magic ID for Turbo Pascal files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	TURBO\ PASCAL\ HELP\ FILE\x00	[fid=000001005-60-0000TPH;ext=tph;mime=;]Borland Pascal help file
+
+# Magic ID for Turbo Vision files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	lelong	0x46484246	[fid=000001005-60-0000TVH;ext=tvh;mime=;]Borland Turbo Vision help file
+
+# Submitted on 2004-05-11 by Carl Eric Codere
+0	beshort	0x601A	[fid=000001006-10-0000TTP;ext=ttp,gem,prg;mime=;]Atari MiNT executable/object file
+&0x12	string	MiNT	
+
+# Submitted on 2004-05-11 by Carl Eric Codere
+0	beshort	0x601A	[fid=000001006-10-0000TTP;ext=ttp,gem,prg;mime=;]Atari TOS executable/object file
+&0x12	belong	0x0000	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	HDOC	[fid=000001006-60-0000HYP;ext=hyp;mime=;]Atari ST-Guide hypertext document
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	beshort	0xE310	[fid=000001007-00-000INFO;ext=info;mime=;]Amiga shortcut / icon file
+
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	DOS	[fid=000001007-0F-0000ADF;ext=adf;mime=;]AmigaOS File system
+&3	byte&0xf8	0	
+>3	byte&1	0	, OFS
+>3	byte&1	1	, FFS
+
+# Submitted on 2004-05-11 by Carl Eric Codere
+0	belong	0x03F3	[fid=000001007-10-LIBRARY;ext=,library;mime=;]Amiga Classic executable file (680x0 family)
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	@database	[fid=000001007-60-00GUIDE;ext=guide;mime=;]AmigaGuide hypertext document
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect help file
+&9	byte	0x02	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect application resource library
+&9	byte	51	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect block file
+&9	byte	13	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect column block
+&9	byte	15	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect dictionary file
+&9	byte	0x0B	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect dictionary rules file
+&9	byte	34	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect external spell code module file
+&9	byte	46	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect external spell dictionary file
+&9	byte	47	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect Graphics screen driver file
+&9	byte	26	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect hyphenation code module file
+&9	byte	23	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect hyphenation data module file
+&9	byte	24	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect hyphenation lex module
+&9	byte	27	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect installation information file
+&9	byte	41	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect keyboard definition file
+&9	byte	0x03	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect macro data file
+&9	byte	0x01	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect macro resource file
+&9	byte	25	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect printer Q codes (used by VAX/DG)
+&9	byte	28	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect rectangular block file
+&9	byte	14	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect spell code module rules file
+&9	byte	33	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect spell code module word list
+&9	byte	29	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect thesarus file
+&9	byte	12	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000001;ext=;mime=;]Wordperfect VAX keyboard definition file
+&9	byte	0x04	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000ALL;ext=all;mime=;]Wordperfect printer resource file
+&9	byte	19	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000DOC;ext=doc;mime=;]Macintosh Wordperfect document file
+&9	byte	44	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000DOC;ext=doc;mime=;]VAX Wordperfect document file
+&9	byte	45	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000DRS;ext=drs;mime=;]Wordperfect display resource file
+&9	byte	20	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000FIL;ext=fil;mime=;]Wordperfect overlay file
+&9	byte	21	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000INS;ext=ins;mime=;]Wordperfect installation information file
+&9	byte	43	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000PRS;ext=prs;mime=;]Wordperfect printer resource file
+&9	byte	16	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000QRS;ext=qrs;mime=;]Wordperfect 5.1 equation resource file
+&9	byte	30	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-00-0000SET;ext=set;mime=;]Wordperfect setup data
+&9	byte	17	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\xffWPC	[fid=000001008-32-0000WPG;ext=wpg;mime=;]Wordperfect Graphics vectors
+&8	byte	1	
+&9	byte	0x16	
+>10	byte	x	, version %d.
+>11	byte	x	%d
+
+# Magic ID for CorelDRAW files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFF	[fid=000001008-33-0000CDR;ext=cdr;mime=;]Coreldraw  little-endian metafile
+&8	string	CDR	
+
+# Magic ID for CorelDRAW files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFX	[fid=000001008-33-0000CDR;ext=cdr;mime=;]Coreldraw  big-endian metafile
+&8	string	CDR	
+
+# Magic ID for CorelDRAW files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFF	[fid=000001008-33-0000CMX;ext=cmx;mime=;]Corel little-endian metafile
+&8	string	CMX1	
+
+# Magic ID for CorelDRAW files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	RIFX	[fid=000001008-33-0000CMX;ext=cmx;mime=;]Corel big-endian metafile
+&8	string	CMX1	
+
+# Magic ID for Wordperfect files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\xFFWPC	[fid=000001008-60-0000WPD;ext=wpd,doc;mime=application/vnd.wordperfect;]Wordperfect document
+&9	byte	0x0A	
+>10	byte	x	, version %d
+>11	byte	x	.%d
+
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	MZ	[fid=000001009-10-0000EXE;ext=exe,dll;mime=;]IBM OS/2 New Executable file
+&0x18	leshort	>0x3F	
+&(60.l)	string	NE	
+&(60.l+54)	byte	0x01	
+
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	ZM	[fid=000001009-10-0000EXE;ext=exe,dll;mime=;]IBM OS/2 New Executable file
+&0x18	leshort	>0x3F	
+&(60.l)	string	NE	
+&(60.l+54)	byte	0x01	
+
+# Magic ID for OS/2,DOS4GW files.
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	MZ	[fid=000001009-10-0000EXE;ext=exe,dll,drv;mime=;]OS/2 Linear executable
+&0x18	leshort	>0x3F	
+&(60.l)	string	LX	
+
+# Magic ID for OS/2,DOS4GW files.
+# Submitted on 2004-04-14 by Carl Eric Codere
+0	string	ZM	[fid=000001009-10-0000EXE;ext=exe,dll,drv;mime=;]OS/2 Linear executable
+&0x18	leshort	>0x3F	
+&(60.l)	string	LX	
+
+# Magic ID for Lotus 1-2-3 files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	\x01\x00\x00\x00\x01\x00\x08\x00\x44	[fid=000001009-32-0000PIC;ext=pic;mime=;]Lotus 1-2-3 image file
+
+# Magic ID for OS/2 files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	HSP	[fid=000001009-60-0000INF;ext=inf;mime=;]OS/2 Guide hypertext document
+
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	FORM	[fid=000001010-21-000SMUS;ext=smus,mus;mime=;]Simple Musical Score file (IFF)
+&8	string	SMUS	
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	FORM	[fid=000001010-22-0008SVX;ext=8svx;mime=;]Amiga Sampled audio file
+&8	string	8SVX	
+
+# Magic ID for Deluxe Paint files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	FORM	[fid=000001010-31-0000LBM;ext=lbm;mime=;]Interleaved bitmap image file
+&8	string	ILBM	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	CAT\ 	[fid=000001010-60-000FTXT;ext=ftxt;mime=;]Formatted text interchange file
+&8	string	FTXT	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	FORM	[fid=000001010-60-000FTXT;ext=ftxt;mime=;]Formatted text interchange file
+&8	string	FTXT	
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	LIST	[fid=000001010-60-000FTXT;ext=ftxt;mime=;]Formatted text interchange file
+&8	string	FTXT	
+
+# Magic ID for Deluxe Paint files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+0	string	CF\x01\x00	[fid=000001010-70-000000C;ext=c;mime=;]Deluxe paint multi-colour font file
+
+# Magic ID for Deluxe Paint files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+0	string	\x1B\x29\x73\x36\x34\x57\x00\x40	[fid=000001010-70-000000M;ext=m;mime=;]Deluxe paint mono colour font file
+
+# Submitted on 2004-08-28 by Carl Eric Codere
+0	string	FORM	[fid=000001010-F0-0000IFF;ext=iff;mime=;]Electronic Arts interchange file format (IFF)
+
+# Magic ID for Smartcards files.
+# Submitted on 2004-10-29 by Carl Eric Codere
+0	belong	0x00FACADE	[fid=000001011-10-0000EXP;ext=exp;mime=;]Javacard API export file
+>0x05	byte	x	, version %d
+>4	byte	x	.%d
+
+# Magic ID for Java compiler files.
+# Submitted on 2004-05-11 by Carl Eric Codere
+0	belong	0xCAFEBABE	[fid=000001011-11-00CLASS;ext=class;mime=;]Java virtual machine class file
+>6	beshort	x	, version %d
+>4	beshort	x	.%d
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	.snd	[fid=000001011-22-00000AU;ext=au,snd;mime=;]Sun / NeXt sampled audio file
+>16	belong	>0	[freq=%d]
+
+# Magic ID for SunOS Icon files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	/*\ Format_version=1,\ 	[fid=000001011-31-000ICON;ext=icon;mime=;]SunOS icon image file
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	belong	0x59a66a95	[fid=000001011-31-0000RAS;ext=ras;mime=;]Sun raster image
+>4	belong	>0	[res=%dx
+>8	belong	>0	%d
+>12	belong	>0	x%dbpp]
+
+# Magic ID for Sun JDK files.
+# Submitted on 2006-08-10 by Carl Eric Codere
+0	string	javazi\x00	[fid=000001011-90-0000000;ext=,;mime=;]Java timezone database file (compiled)
+>0x07	byte	x	, version %d
+
+# Submitted on 2004-02-16 by Carl Eric Codere
+0	string	IBK\x1A	[fid=000001013-20-0000IBK;ext=ibk;mime=;]Creative Labs FM instrument bank file
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	SBI\x1A	[fid=000001013-20-0000SBI;ext=sbi;mime=;]Creative Labs FM instrument data file
+>4	string	>0	[title=%.32s]
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	CTMF	[fid=000001013-21-0000CMF;ext=cmf;mime=;]Creative Labs music file
+>4	byte	x	, version %d
+>5	byte	x	.%d
+
+# Magic ID for Sound Blaster SDK files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	Creative\ Voice\ File\x1A	[fid=000001013-22-0000VOC;ext=voc;mime=;]Creative Voice audio file
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\0\001\243\144	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\0\002\243\144	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file, little-endian
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\0\003\243\144	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file, big-endian
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\144\243\001\0	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\144\243\002\0	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file, big-endian
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\144\243\003\0	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file, little-endian
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\144\243\004\0	[fid=000001014-22-00000SF;ext=sf;mime=;]IRCAM audio sample file, big-endian
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	BEGIN:VCARD	[fid=000001015-B0-0000VCF;ext=vcf,vcard;mime=;]vCard Business Card file
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+2	string	ADLIB-	[fid=000001016-20-0000BNK;ext=bnk;mime=;]Adlib FM instrument bank file
+>0	byte	x	, version %d
+>1	byte	x	.%d
+
+# Magic ID for Adlib Visual Composer files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	leshort	0x0000	[fid=000001016-21-0000ROL;ext=rol;mime=;]Adlib music file
+&2	leshort	0x0004	
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	BEGIN:VCALENDAR	[fid=000001016-B1-0000VCS;ext=vcs;mime=;]vCalendar Agenda file
+
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	MThd	[fid=000001017-21-0000SMF;ext=smf,midi;mime=;]Standard MIDI music file
+>10	beshort	>0	[chn=%d]
+
+# Magic ID for Gravis Ultrasound files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	GF1PATCH100\0ID#000002\0	[fid=000001018-20-0000PAT;ext=pat;mime=;]Gravis Ultrasound Patch (old instrument data)
+
+# Magic ID for Gravis Ultrasound files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	GF1PATCH110\0ID#000002\0	[fid=000001018-20-0000PAT;ext=pat;mime=;]Gravis Ultrasound Patch (instrument data)
+
+# Magic ID for Sppack files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+252	beshort	0x40C3	[fid=000001019-22-000000D;ext=d;mime=;]Sppack audio sample file
+&254	beshort	0xFC0E	
+
+# Magic ID for X-Windows files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	/* XPM */	[fid=000001020-31-0000XPM;ext=xpm;mime=;]X-Windows pixel map image file
+
+# Magic ID for XWindows files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	belong	0x40	[fid=000001020-31-0000XWD;ext=xwd;mime=;]X10 XWindows dump image file
+&4	belong	0x06	
+>24	belong	x	[res=%d
+>28	belong	x	x%d]
+
+# Magic ID for XWindows files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	lelong	0x40	[fid=000001020-31-0000XWD;ext=xwd;mime=;]X10 XWindows dump image file
+&4	lelong	0x06	
+>24	lelong	x	[res=%d
+>28	lelong	x	x%d]
+
+# Magic ID for XMLppm files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	xppm\x00	[fid=000100075-50-0000XPM;ext=xppm;mime=;]XML-Conscious PPM Compressed file
+
+# Magic ID for VICAR files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	LBLSIZE=	[fid=000001022-31-0000VIC;ext=vic,vicar;mime=;]Vicar image file
+
+# Magic ID for AOL files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	JG\x04\x0E	[fid=000001023-31-0000ART;ext=art;mime=;]AOL/Johnson-Grace image file, version 2.0
+>0x0D	leshort	x	[res=%dx
+>0x0F	leshort	x	%d]
+
+# Magic ID for Realplayer files.
+# Submitted on 2004-05-19 by Carl Eric Codere
+0	string	.RMF	[fid=000001027-81-00000RM;ext=rm,ra,rt,rp,rpa;mime=;]RealMedia multimedia container stream file
+
+# Magic ID for Lightwave 3D files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	FORM	[fid=000001251-31-000FPBM;ext=fpbm;mime=;]Flexible Precision Buffer Map image file
+&8	string	FPBM	
+
+# Magic ID for Lightwave 3D files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	FORM	[fid=000001251-40-0000LWO;ext=lwob,lwo;mime=;]Lightwave 3D object
+&8	string	LWOB	
+
+# Magic ID for Lightwave 3D files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	FORM	[fid=000001251-40-0000LWO;ext=lwo,lwob;mime=;]Lightwave 3D object
+&8	string	LWO2	
+
+# Magic ID for Lightwave 3D files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	LWSC	[fid=000001251-40-0000LWS;ext=lwsc,lws;mime=;]Lightwave 3D scene
+
+# Magic ID for Turbo Silver files.
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	FORM	[fid=000001252-31-000RGB8;ext=rgb8,rgb;mime=;]Turbo Silver 24-bit RGB image file
+&8	string	RGB8	
+
+# Magic ID for Turbo Silver files.
+# Submitted on 2004-04-13 by Carl Eric Codere
+0	string	FORM	[fid=000001252-31-000RGBN;ext=rgbn,rgb;mime=;]Turbo Silver 12-bit RGB image file
+&8	string	RGBN	
+
+# Magic ID for Imagine 3D Studio, Turbo Silver files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	FORM	[fid=000001252-40-000TDDD;ext=tddd,obj;mime=;]Imagine 3D object
+&8	string	TDDD	
+
+# Magic ID for Worldtoolkit files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	nff	[fid=000001253-40-0000NFF;ext=nff;mime=;]Sense8 Worldtoolkit 3D object
+
+# Magic ID for Autodesk Animator files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	leshort	0x9119	[fid=000001254-31-0000CEL;ext=cel,pic;mime=;]Autodesk animator image file
+&10	byte	8	
+&11	byte	0	
+>2	leshort	x	[res=%d
+>4	leshort	x	x%dx8bpp]
+
+# Magic ID for Autocad files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	AutoCAD Slide	[fid=000001254-32-0000SLD;ext=sld;mime=;]Autocad slide image file
+
+# Magic ID for Autodesk Animator files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+2	lelong	0x0000	[fid=000001254-40-0000PLY;ext=ply;mime=;]Autodesk animator polygon file
+&6	byte	0	
+&7	byte	0x99	
+
+# Magic ID for Autodesk Animator files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+2	lelong	0x0000	[fid=000001254-40-0000PLY;ext=ply;mime=;]Autodesk animator polygon file
+&6	byte	1	
+&7	byte	0x99	
+
+# Magic ID for Autocad files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	AutoCAD Binary DXF	[fid=000001254-40-0000DXF;ext=dxf;mime=image/vnd.dxf;]Autocad drawing interchange format, binary
+
+# Magic ID for Autocad files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	AC10	[fid=000001254-40-0000DWG;ext=dwg;mime=image/vnd.dwg;]Autocad drawing format 3d model
+
+# Magic ID for Autodesk Animator Pro files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+4	leshort	0xAF12	[fid=000001254-82-0000FLC;ext=flc;mime=;]Autodesk Animator Pro animation
+&12	leshort	0x08	
+>8	leshort	x	[res=%dx
+>10	leshort	x	%d
+>12	leshort	x	x%dbpp]
+
+# Magic ID for Autodesk Animator files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+4	leshort	0xAF11	[fid=000001254-82-0000FLI;ext=fli;mime=;]Autodesk Animator animation
+&12	leshort	0x08	
+>8	leshort	x	[res=%dx
+>10	leshort	x	%d
+>12	leshort	x	x8bpp]
+
+# Magic ID for Cinema 4D Version 4.x and earlier files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	FORM	[fid=000001255-40-000MC4D;ext=mc4d;mime=;]Maxon Cinema 4D v4.x 3D data
+&8	string	MC4D	
+
+# Magic ID for Cinema 4D Version 5.x files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	MC50	[fid=000001255-40-0000000;ext=;mime=;]Maxon Cinema 4D version 5 3D data
+
+# Magic ID for Caligari Truespace Modeler files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	string	Caligari\ V	[fid=000001256-40-0000COB;ext=cob,scn;mime=;]Caligari Truespace2 3D model
+
+# Magic ID for PC-Paintbrush files.
+# Submitted on 2004-02-06 by Carl Eric Codere
+0	lelong	0x3ADE68B1	[fid=000001257-31-0000DCX;ext=dcx;mime=;]PC-Paintbrush multiple image file
+
+# Magic ID for PC-Paintbrush files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0x0A00	[fid=000001257-31-0000PCX;ext=pcx;mime=;]PC-Paintbrush image file, version 2.5
+&2	byte	1	
+
+# Magic ID for PC-Paintbrush files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0x0A02	[fid=000001257-31-0000PCX;ext=pcx;mime=;]PC-Paintbrush image file, version 2.8
+&2	byte	1	
+
+# Magic ID for PC-Paintbrush files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0x0A03	[fid=000001257-31-0000PCX;ext=pcx;mime=;]PC-Paintbrush image file, version 2.8
+&2	byte	1	
+
+# Magic ID for PC-Paintbrush files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0x0A04	[fid=000001257-31-0000PCX;ext=pcx;mime=;]PC-Paintbrush for windows image file
+&2	byte	1	
+
+# Magic ID for PC-Paintbrush files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0x0A05	[fid=000001257-31-0000PCX;ext=pcx;mime=;]PC-Paintbrush image file, version 3.0
+&2	byte	1	
+
+# Magic ID for Graphics Workshop files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	THNL	[fid=000001258-31-0000THN;ext=thn;mime=;]Graphics workshop thumbnail image file
+
+# Magic ID for Macromedia Director files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	IFX	[fid=000001259-40-0000W3D;ext=w3d;mime=;]Shockwave 3D model
+
+# Magic ID for Macromedia Flash files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	FWS	[fid=000001259-81-0000SWF;ext=swf;mime=;]Shockwave Macromedia animation (SWF) file
+>3	byte	x	, version %d.0
+
+# Magic ID for Fantavision movie maker files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	FORM	[fid=000001260-82-000FANT;ext=fant;mime=;]Fantavision movie
+&8	string	FANT	
+
+# Magic ID for Aegis Animator files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	FORM	[fid=000001261-82-000ANIM;ext=anim;mime=;]Amiga / Sparta software animation
+&8	string	ANIM	
+
+# Magic ID for CrossePAC files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	DSIGDCC	[fid=000001262-50-0000PAC;ext=pac;mime=;]CrossePAC archive file
+
+# Magic ID for JRchive files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	JRchive	[fid=000001263-50-0000JRC;ext=jrc;mime=;]JRchive archive file
+
+# Magic ID for Streamline Archival Utility files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+3	string	LH0	[fid=000001264-50-0000SAR;ext=sar;mime=;]Streaming Archiver Utility archive file
+
+# Magic ID for Streamline Archival Utility files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+3	string	LH4	[fid=000001264-50-0000SAR;ext=sar;mime=;]Streaming Archiver Utility archive file
+
+# Magic ID for Streamline Archival Utility files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+3	string	LH5	[fid=000001264-50-0000SAR;ext=sar;mime=;]Streaming Archiver Utility archive file
+
+# Magic ID for Ace / WinAce files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+7	string	**ACE**	[fid=000001265-50-0000ACE;ext=ace;mime=;]Ace / WinACE archive file
+
+# Magic ID for Pkunzip, Info-zip Unzip files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	lelong	0x04034b50	[fid=000001266-50-0000ZIP;ext=zip;mime=application/zip;]Pkzip archive file
+
+# Magic ID for Rar files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\x52\x61\x72\x21\x1a\x07\x00	[fid=000001267-50-0000RAR;ext=rar;mime=;]RAR archive file
+
+# Magic ID for Pagestream files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	FORM	[fid=000001268-60-0000DOC;ext=doc;mime=;]Pagestream document
+&8	string	DOC\ 	
+
+# Magic ID for Winimp files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	lelong	0xA504D49	[fid=000001270-50-0000IMP;ext=imp;mime=;]Winimp archive file
+
+# Magic ID for uc2 files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+0	string	UC2\x1a	[fid=000001271-50-0000UC2;ext=uc2;mime=;]Ultra Compressor archive file
+
+# Magic ID for Stuffit files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	StuffIt\ 	[fid=000001272-50-0000SIT;ext=sit;mime=;]Stuffit archive file
+
+# Magic ID for Stuffit Extended files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	StuffIt!	[fid=000001272-50-000SITX;ext=sitx;mime=;]Stuffit extended archive file
+
+# Magic ID for Stuffit files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	SIT!	[fid=000001272-50-0000SIT;ext=sit;mime=;]Stuffit archive file
+&10	string	rLau	
+>14	byte	x	, version %d.0
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0x01	[fid=000001273-31-0000IMG;ext=img;mime=;]GEM Bit Image
+&2	beshort	0x08	
+>12	beshort	>0	[res=%dx
+>14	beshort	>0	%d
+>4	beshort	>0	x%dbpp]
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	leshort	0xFFFF	[fid=000001273-33-0000GEM;ext=gem;mime=;]GemDOS Metafile
+&4	leshort	0	
+
+# Magic ID for Artline files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	leshort	0xFFFF	[fid=000001273-33-0000GEM;ext=gem;mime=;]GemDOS Intel Metafile, version 4.00
+&4	leshort	400	
+
+# Magic ID for Deskpress files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	leshort	0xFFFF	[fid=000001273-33-0000GEM;ext=gem;mime=;]GemDOS Intel Metafile, version 3.10
+&4	leshort	310	
+
+# Magic ID for GEM Paint files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	leshort	0xFFFF	[fid=000001273-33-0000GEM;ext=gem;mime=;]GemDOS Intel Metafile, version 1.01
+&4	leshort	101	
+
+# Magic ID for GEM Paint files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	beshort	0xFFFF	[fid=000001273-33-0000GEM;ext=gem;mime=;]GemDOS Motorola Metafile, version 1.01
+&4	beshort	101	
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	GIF8	[fid=000001274-31-0000GIF;ext=gif;mime=image/gif;]GIF image file
+&10	byte&0x70	!0x70	
+>4	string	x	, version 8%.2s
+>6	leshort	>0	[res=%dx
+>8	leshort	>0	%d]
+
+# Submitted on 2004-02-14 by Carl Eric Codere
+0	string	GIF8	[fid=000001274-31-0000GIF;ext=gif;mime=image/gif;]GIF image file
+&10	byte&0x70	0x70	
+>4	string	x	, version 8%.2s
+>6	leshort	>0	[res=%dx
+>8	leshort	>0	%dx8bpp]
+
+# Magic ID for Fasttracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	6CHN	[fid=000001275-21-0000MOD;ext=mod;mime=;]Fasttracker module music file, 6 channels
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for Fasttracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	8CHN	[fid=000001275-21-0000MOD;ext=mod;mime=;]Fasttracker module music file, 6 channels
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for Velvet Studio files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	AMShdr\x1a	[fid=000001276-21-0000AMS;ext=ams;mime=;]Velvet Studio module music file
+
+# Magic ID for SoundFX files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+60	string	SONG	[fid=000001277-21-0000SFX;ext=sfx;mime=;]SoundFX Tracker module music file
+
+# Magic ID for MED Soundstudio / OctaMED files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	MMD0	[fid=000001278-21-0000MED;ext=med;mime=;]Octamed tracker module music file
+
+# Magic ID for MED Soundstudio / OctaMED files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	MMD1	[fid=000001278-21-0000MED;ext=med;mime=;]Octamed Pro Tracker module music file
+
+# Magic ID for MED Soundstudio / OctaMED files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	MMD2	[fid=000001278-21-0000MED;ext=med;mime=;]Octamed Pro Tracker module music file
+
+# Magic ID for MED Soundstudio / OctaMED files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	MMD3	[fid=000001278-21-0000MED;ext=med;mime=;]Octamed Sound Studio module music file
+
+# Magic ID for Imago Morpheus files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0x3C	string	IM10	[fid=000001279-21-0000IMF;ext=imf;mime=;]Imago morpheus music file, 32 channels
+>0	string	x	[title=%.31s]
+
+# Magic ID for Bells, Whistles, and Sound Boards files.
+# Submitted on 2004-02-16 by Carl Eric Codere
+0	string	GDM\xFE	[fid=000001280-21-0000GDM;ext=gdm;mime=;]General DigiMusic module music file
+>4	string	>\x00	[title=%.32s]
+
+# Magic ID for AAX files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	\x40\xFE\x00\x00	[fid=000001281-50-0000AAX;ext=aax;mime=;]AAX archive file
+
+# Magic ID for ABComp files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	\x03AB2	[fid=000001282-50-0000ABP;ext=abp;mime=;]ABComp archive file
+
+# Magic ID for AMG Archiver files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	\xAD\x36	[fid=000001284-50-0000AMG;ext=amg;mime=;]AMG archive file
+&3	byte	0	
+
+# Magic ID for Arj files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	\x60\xEA	[fid=000001285-50-0000ARJ;ext=arj;mime=;]ARJ archive file
+&10	byte	2	
+
+# Magic ID for ASD files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	ASD01\x1A	[fid=000001287-50-0000ASD;ext=asd;mime=;]ASD archive file
+
+# Magic ID for Bsa files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	\xFFBSG\x00\x00\xFFBSA	[fid=000001289-50-0000BSN;ext=bsn;mime=;]Bsa archive file
+
+# Magic ID for Crush files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	CRUSH\ v1.8	[fid=000001290-50-0000CRU;ext=cru;mime=;]Crush archive file
+
+# Magic ID for HAP files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	\x913HF	[fid=000001291-50-0000HAP;ext=hap;mime=;]HAP archive file
+
+# Magic ID for Nashrink files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	NSK	[fid=000001292-50-0000NSK;ext=nsk;mime=;]NaShrink archive file
+
+# Magic ID for Quantum compressor files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	DS	[fid=000001294-50-000000Q;ext=q;mime=;]Quantum archive file
+&2	byte	<2	
+>2	byte	x	, version %d
+>3	byte	x	.%d
+
+# Magic ID for Romanian archiver eXpert (RAX) files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	ULEB	[fid=000001295-50-0000RAX;ext=rax;mime=;]RAX archive file
+
+# Magic ID for SBX Archiver files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	SB1\x00	[fid=000001297-50-00000SB;ext=sb;mime=;]SBX archive file
+
+# Magic ID for Audio visual research files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	2BIT	[fid=000100131-21-0000AVR;ext=avr;mime=;]Audio visual research audio file
+>4	string	x	[title=%.8s]
+
+# Magic ID for Digibooster files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	DIGI Booster module\0	[fid=000001302-21-000DIGI;ext=digi;mime=;]Digibooster music file
+>610	string	x	[title=%.32s]
+
+# Magic ID for Musicline files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	MLEDMODL	[fid=000001304-21-00000ML;ext=ml;mime=;]Musicline module music file
+
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	belong	0xffd8ffe0	[fid=000001305-31-000JPEG;ext=jpeg,jpg;mime=image/jpeg;]Joint Photographic Experts Group JFIF image file
+&6	string	JFIF\x00	
+>11	byte	x	, version %d
+>12	byte	x	.0%d
+
+# Submitted on 2004-04-01 by Carl Eric Codere
+-18	string	TRUEVISION-XFILE	[fid=000001306-31-0000TGA;ext=tga;mime=;]Truevision Targa image file
+>12	leshort	x	[res=%dx
+>14	leshort	x	%d
+>16	byte	x	x%dbpp]
+
+# Magic ID for Khoros files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	\xAB\x01\x01\x03	[fid=000001308-31-0000VIF;ext=vif,viff;mime=;]Khoros Visualization/Image File Format, version 1.3
+&4	byte	2	
+>520	belong	>0	[res=%dx
+>524	belong	>0	%d]
+
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	SDPX	[fid=000001309-31-0000DPX;ext=dpx;mime=;]Digital Moving-Picture Exchange image file
+>160	string	>\x00	[creator=%.100s]
+>260	string	>\x00	[title=%.200s]
+
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	XPDS	[fid=000001309-31-0000DPX;ext=dpx;mime=;]Digital Moving-Picture Exchange image file
+>160	string	>\x00	[creator=%.100s]
+>260	string	>\x00	[title=%.200s]
+
+# Magic ID for Paint shop pro files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	Paint Shop Pro Image File\x0a\x1a	[fid=000001310-31-0000PSP;ext=psp;mime=;]Paintshop pro image file
+>50	lelong	>0	[res=%dx
+>54	lelong	>0	%d
+>69	leshort	>0	x%dbpp]
+
+# Magic ID for Maya files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	FOR4	[fid=000001312-31-000FOR4;ext=;mime=;]Maya image file
+&8	string	CIMG	
+
+# Magic ID for Maya files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	FOR8	[fid=000001312-31-000FOR8;ext=;mime=;]Maya image file
+&8	string	CIMG	
+
+# Magic ID for Maya files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	//Maya	[fid=000001312-40-00000MA;ext=ma;mime=;]Maya 3d model, ascii encoded
+
+# Magic ID for Andrew User Interface System files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+1	string	begindata{raster	[fid=000001315-31-0000CMU;ext=cmu;mime=;]Andrew toolkit raster image file
+
+# Magic ID for Microdesign2, Microdesign3 files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	.MDA	[fid=000001316-31-0000MDA;ext=mda;mime=;]Microdesign Area image file
+
+# Magic ID for Microdesign2, Microdesign3 files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	.MDP	[fid=000001316-31-0000MDP;ext=mdp;mime=;]Microdesign page image file
+
+# Magic ID for PC Paint files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	leshort	0x1234	[fid=000001318-31-0000PIC;ext=pic;mime=;]Pictor PC Paint image file
+&11	byte	0xFF	
+&10	byte	0x02	
+>2	leshort	x	[res=%d
+>4	leshort	x	x%d]
+
+# Magic ID for PC Paint files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	leshort	0x1234	[fid=000001318-31-0000PIC;ext=pic;mime=;]Pictor PC Paint image file
+&11	byte	0xFF	
+&10	byte	0x08	
+>2	leshort	x	[res=%d
+>4	leshort	x	x%d]
+
+# Magic ID for PC Paint files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	leshort	0x1234	[fid=000001318-31-0000PIC;ext=pic;mime=;]Pictor PC Paint image file
+&11	byte	0xFF	
+&10	byte	0x31	
+>2	leshort	x	[res=%d
+>4	leshort	x	x%d]
+
+# Magic ID for Provector files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	string	FORM	[fid=000001319-32-000DR2D;ext=dr2d;mime=;]Provector 2D image file
+&8	string	DR2D	
+
+# Magic ID for ColoRIX VGA Paint files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	string	RIX3	[fid=000001320-31-0000SCZ;ext=scz;mime=;]ColorRIX VGA Paint image file
+>4	leshort	x	[res=%d
+>6	leshort	x	x%d]
+
+# Magic ID for Softimage 3D files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+0	belong	0x5380f634	[fid=000001321-31-0000PIC;ext=pic;mime=;]Softimage 3D image file
+&88	string	PICT	
+>8	string	>\x00	[title=%.80s]
+>92	beshort	x	[res=%d
+>94	beshort	x	x%d]
+
+# Magic ID for Softimage 4D Creative environment files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	HRCH:	[fid=000001321-40-0000HRC;ext=hrc;mime=;]Softimage 4d model, ascii encoded
+
+# Magic ID for Softimage XSI files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	xsi\ 	[fid=000001321-40-0000XSI;ext=xsi;mime=;]Softimage 3d model
+
+# Magic ID for Bio-rad microscope files.
+# Submitted on 2004-04-08 by Carl Eric Codere
+54	leshort	12345	[fid=000001322-31-0000PIC;ext=pic;mime=;]Bio-rad confocal microscope image file
+&16	leshort	0	
+>0	leshort	>0	[res=%d
+>2	leshort	>0	x%d]
+
+# Magic ID for Renderman files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	##RenderMan\ RIB-Structure	[fid=000001323-40-0000RIB;ext=rib;mime=;]Renderman bytestream 3D model
+
+# Magic ID for 3dStudio Max files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	*3DSMAX_ASCIIEXPORT	[fid=000001326-40-0000ASE;ext=ase;mime=;]3d studio max ascii export 3D model
+
+# Magic ID for Videoscape 3D files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	GOUR	[fid=000001328-40-0000GEO;ext=geo;mime=;]Videoscape 3d model with colored vertices
+
+# Magic ID for Videoscape 3D, Blender files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	3DG1	[fid=000001328-40-0000GEO;ext=geo;mime=;]Videoscape 3d model with colored faces
+
+# Magic ID for Videoscape 3D, Blender files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	3DG2	[fid=000001328-40-0000GEO;ext=geo;mime=;]Videoscape 3d model light source
+
+# Magic ID for Videoscape 3D, Blender files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	3DG3	[fid=000001328-40-0000GEO;ext=geo;mime=;]Videoscape 3d model with gouraud curves
+
+# Magic ID for Rhino 3d files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	3D Geometry File Format	[fid=000001330-40-0003DMF;ext=3dmf;mime=;]Rhino3d / OpenNurbs 3d model
+
+# Magic ID for Multigen creator files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	beshort	1	[fid=000001332-40-0000FLT;ext=flt;mime=;]Openflight scene description 3d model
+&4	string	db	
+
+# Magic ID for Quick3d files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	quick3Do	[fid=000001334-40-0000Q3O;ext=q3o;mime=;]Quick3d 3D object
+
+# Magic ID for Quick3d files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	quick3Ds	[fid=000001334-40-0000Q3S;ext=q3s;mime=;]Quick3d 3D scene
+
+# Submitted on 2005-12-18 by Carl Eric Codere
+0	string	TWIN	[fid=000001341-22-0000VQF;ext=vqf;mime=;]TwinVQ audio file
+&0x10	string	COMM	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Account	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Bank	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Cash	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Cat	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:CCard	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Class	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Invst	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Memorized	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Oth A	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for Quicken files.
+# Submitted on 2004-08-01 by Carl Eric Codere
+1	string	Type:Oth L	[fid=000001335-91-0000QIF;ext=qif;mime=;]Quicken interchange file
+&0	byte	33	
+
+# Magic ID for PCL 5 files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+0	string	\x00\x44\x00\x01\x00\x00\x00\x1A	[fid=000001336-70-0000LIB;ext=lib,type;mime=;]Intellifont Scalable Typeface Format  file
+
+# Magic ID for X-Windows, GemDOS files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+2	string	\x2E\x30\x0D\x0A\x00\x00	[fid=000001337-70-0000SPD;ext=spd;mime=;]Bitstream Speedo font file
+&0	string	D	
+>24	string	x	[title=%.70s]
+>1	string	x	,version %.1s.0
+
+# Submitted on 2004-11-12 by Carl Eric Codere
+0	lelong	0x526f6d2e	[fid=000001338-0F-0000ROM;ext=rom,fs;mime=;]eCos ROM Filesystem image (ROMFS)
+>16	string	x	[title=%.16s]
+
+# Magic ID for PADGen files.
+# Submitted on 2004-11-26 by Carl Eric Codere
+0x28	string	<XML_DIZ_INFO>	[fid=000001339-A0-0000XML;ext=xml;mime=text/xml;]Portable application description file (XML)
+&0	string	<?xml	
+
+# Magic ID for PADGen files.
+# Submitted on 2004-11-26 by Carl Eric Codere
+0x29	string	<XML_DIZ_INFO>	[fid=000001339-A0-0000XML;ext=xml;mime=text/xml;]Portable application description file (XML)
+&0	string	<?xml	
+
+# Magic ID for Texinfo files.
+# Submitted on 2004-11-26 by Carl Eric Codere
+1	string	input texinfo	[fid=000001340-00-000TEXI;ext=texi;mime=;]Texinfo source file
+
+# Magic ID for GNU GetText files.
+# Submitted on 2006-08-10 by Carl Eric Codere
+0	belong	0xde120495	[fid=000001340-90-00000MO;ext=mo;mime=;]GNU GetText compiled language file (big-endian)
+&0x04	belong	<0x02	
+>0x04	belong	x	, version %d
+
+# Magic ID for GNU GetText files.
+# Submitted on 2006-08-10 by Carl Eric Codere
+0	lelong	0x950412de	[fid=000001340-90-00000MO;ext=mo;mime=;]GNU GetText compiled language file (little-endian)
+&0x04	lelong	<0x02	
+>0x04	lelong	x	, version %d
+
+# Magic ID for Archive Handler files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	LG	[fid=000100001-50-00000LG;ext=lg;mime=;]Arhangel archive file
+
+# Magic ID for ESP files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0x53f	string	ESP	[fid=000100002-50-0000EXE;ext=exe;mime=;]ESP Self-extracting archivew (MS-DOS)
+
+# Magic ID for ESP files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	ESP>	[fid=000100002-50-0000ESP;ext=esp;mime=;]ESP archive file
+
+# Magic ID for 624 files.
+# Submitted on 2004-03-03 by Carl Eric Codere
+0	string	[ESP]\xB5\x78	[fid=000100002-51-0000COM;ext=com;mime=;]624 executable compressed file (MS-DOS)
+
+# Magic ID for 624 files.
+# Submitted on 2004-03-03 by Carl Eric Codere
+0	string	PULP\x83	[fid=000100002-51-0000COM;ext=com;mime=;]624 executable compressed file (MS-DOS)
+
+# Magic ID for Limit files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	LM\x1A	[fid=000100003-50-0000LIM;ext=lim;mime=;]Limit archive file
+
+# Magic ID for Mdcd (Mike Davenport compressor) files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	MDmd	[fid=000100004-50-00000MD;ext=md;mime=;]Mike Davenport archive file
+>4	byte	x	, version %d
+&5	byte	1	
+
+# Magic ID for Nulib files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\x4e\xf5\x46\xd8	[fid=000100005-50-0000SHK;ext=shk;mime=;]Shrinkit/Nulib archive file
+
+# Magic ID for Nulib files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\x4e\xf5\x46\xe9\x6c\xe5	[fid=000100005-50-0000SHK;ext=shk;mime=;]Shrinkit/Nulib archive file
+
+# Magic ID for Splint files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	\x93\xB9\x06	[fid=000100006-50-0000SPL;ext=spl;mime=;]Splint archive file
+
+# Magic ID for Zzip files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	ZZ	[fid=000100007-50-00000ZZ;ext=zz;mime=;]ZZip archive file
+>2	byte	x	, version %d.0
+
+# Magic ID for Bzip files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	BZ0	[fid=000100008-50-00000BZ;ext=bz;mime=;]Bzip archive file
+
+# Magic ID for Bzip2 files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	BZh	[fid=000100008-50-0000BZ2;ext=bz2;mime=;]Bzip2 archive file
+
+# Magic ID for Szip files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	SZ\x0A\x04	[fid=000100009-50-00000SZ;ext=sz;mime=;]SZIP archive file
+>4	byte	x	, version %d
+>5	byte	x	.%d
+
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	This\ is\ Info\ file	[fid=000100010-60-000INFO;ext=info;mime=;]GNU Info hypertext document
+
+# Magic ID for XFig, WinFig, jFig files.
+# Submitted on 2004-02-08 by Carl Eric Codere
+0	string	#FIG	[fid=000100011-32-0000FIG;ext=fig;mime=;]Facility for Interactive Generation file
+>5	string	x	, version %.1s.
+>7	string	x	%.1s
+
+# Magic ID for zoo files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+0	string	ZOO	[fid=000100012-50-0000ZOO;ext=zoo;mime=;]Zoo archive file
+&0x14	lelong	0x0FDC4A7DC	
+>32	byte	x	, version %d
+>33	byte	x	.%d
+
+# Magic ID for Ha files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+0	string	HA	[fid=000100013-50-00000HA;ext=ha;mime=;]HA archive file
+
+# Magic ID for Sqweez files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+0	string	SQWEZ\ 	[fid=000100014-50-0000SQZ;ext=sqz;mime=;]Sqwez archive file
+
+# Magic ID for Sqz files.
+# Submitted on 2004-02-10 by Carl Eric Codere
+0	string	HLSQZ	[fid=000100015-50-0000SQZ;ext=sqz;mime=;]Squeeze archive file
+>5	string	x	, version %.1s.0
+
+# Magic ID for Hpack files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	HPAK	[fid=000100016-50-0000HPK;ext=hpk;mime=;]Hpack archive file
+&-4	string	HPAK	
+
+# Magic ID for Larc files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lz4-	[fid=000100017-50-0000LZH;ext=lzh;mime=;]Larc archive
+
+# Magic ID for Larc files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lz5-	[fid=000100017-50-0000LZH;ext=lzh;mime=;]Larc archive file
+
+# Magic ID for Larc files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lzs-	[fid=000100017-50-0000LZH;ext=lzh;mime=;]Larc archive file
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh\ -	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh0-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 1.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh1-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 1.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh2-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh3-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh4-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh5-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh6-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lh7-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lha files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+2	string	-lhd-	[fid=000100017-50-0000LZH;ext=lzh,lha;mime=;]LHarc archive file, version 2.x
+
+# Magic ID for lzo files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	\x89\x4c\x5a\x4f\x00\x0d\x0a\x1a\x0a	[fid=000100018-50-0000LZO;ext=lzo;mime=;]LZOP archive file
+
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	FORM	[fid=000100019-33-000AMFF;ext=amff;mime=;]Amiga metafile
+&8	string	AMFF	
+
+# Magic ID for SBStudio sound files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	PACG	[fid=000100020-21-0000PAC;ext=pac;mime=;]SBStudio module music file
+
+# Magic ID for SBStudio files.
+# Submitted on 2004-02-11 by Carl Eric Codere
+0	string	SND\ 	[fid=000100020-22-0000SOU;ext=sou;mime=;]SBStudio sampled audio file
+
+# Magic ID for Surprise! Adlib Tracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	SAdT	[fid=000100021-21-0000SA2;ext=sa2;mime=;]Surprise Productions Adlib tracker music file
+>4	byte	x	, version 0.%d
+
+# Magic ID for Protracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	M!K!	[fid=000100022-21-0000MOD;ext=mod;mime=;]Protracker 2.3 module music file
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for Protracker files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	FORM	[fid=000100022-21-0000MOD;ext=mod;mime=;]Protracker module music file, version 3.x
+&8	string	MODL	
+
+# Magic ID for Protracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	M.K.	[fid=000100022-21-0000MOD;ext=mod;mime=;]Protracker module music file
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for Noisetracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	M&K!	[fid=000100023-21-0000NST;ext=nst;mime=;]Noisetracker module music file
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for Startrekker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	FLT4	[fid=000100024-21-0000MOD;ext=mod;mime=;]Startrekker module music file, 4 channels
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for Startrekker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1080	string	FLT8	[fid=000100024-21-0000MOD;ext=mod;mime=;]Startrekker module music file, 8 channels
+>0	string	>\0	[title=%.20s]
+
+# Magic ID for STMIK files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0x15	string	Scream!	[fid=000100025-21-0000STX;ext=stx;mime=;]STMIK module music file
+
+# Magic ID for Screamtracker 3 files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0x2C	string	SCRM	[fid=000100025-21-0000S3M;ext=s3m;mime=;]Scream tracker module music file
+>0x2A	leshort	>0	, version %d.0
+>0	string	>\0	[title=%.28s]
+
+# Magic ID for Screamtracker files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0x4C	string	SCRS	[fid=000100025-22-0000SMP;ext=smp;mime=;]Screamtracker audio sample
+>0x30	string	x	[title=%.30s]
+
+# Magic ID for Fasttracker 2.0 files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	Extended\ Instrument:\ 	[fid=000100026-20-00000XI;ext=xi;mime=;]FastTracker II instrument file
+
+# Magic ID for Fasttracker 2.0 files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	Extended\ Module:\ 	[fid=000100026-21-00000XM;ext=xm;mime=;]FastTracker II module music file
+>59	byte	x	, version %d
+>58	byte	x	.0%d
+>17	string	x	[title=%.20s]
+
+# Magic ID for Edlib files.
+# Submitted on 2004-03-07 by Carl Eric Codere
+0	string	\x00\x06\xFE\xFD	[fid=000100027-21-0000EDL;ext=edl;mime=;]Edlib FM tracker music file
+
+# Magic ID for Soundmon files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+26	string	V.2	[fid=000100028-21-00000BP;ext=bp;mime=;]Soundmon module music file, version 2.x
+>0	string	>\0	[title=%.26s]
+
+# Magic ID for Soundmon files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+26	string	V.3	[fid=000100028-21-0000BP3;ext=bp3;mime=;]Soundmon module music file, version 3.x
+>0	string	>\0	[title=%.26s]
+
+# Magic ID for Abyss's highest experience (AHX) files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	THX	[fid=000100029-21-0000AHX;ext=ahx;mime=;]AHX module music file
+
+# Magic ID for Oktalyzer tracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	OKTASONG	[fid=000100030-21-0000OKT;ext=okt;mime=;]Oktalyzer module music file
+
+# Magic ID for Graoumf Tracker 2 files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	GT2	[fid=000100031-21-0000GT2;ext=gt2;mime=;]Graoumf Tracker module music file
+
+# Magic ID for Impulse tracker files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	IMPI	[fid=000100032-20-0000ITI;ext=iti;mime=;]Impulse tracker instrument file
+>0x20	string	x	[title=%.26s]
+
+# Magic ID for Impulse tracker files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	IMPM	[fid=000100032-21-00000IT;ext=it;mime=;]Impulse Tracker module music file
+>4	string	>\x00	[title=%.26s]
+
+# Magic ID for Amusic files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+1062	string	\x3c\x6f\xef\x51\x55\xEE\x52\x6F\x52	[fid=000100034-21-0000AMD;ext=amd;mime=;]Amusic Adlib tracker music file
+>0	string	>\x00	[title=%.23s]
+>24	string	>\0	[creator=%.24s]
+
+# Magic ID for AR7 files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	,AR7 e-mailable archive:	[fid=000100036-50-0000AR7;ext=ar7;mime=;]AR7 archive file
+
+# Magic ID for Bix files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	BIX0	[fid=000100037-50-0000BIX;ext=bix;mime=;]BIX archive file
+
+# Magic ID for Squash files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+3	string	OctSqu	[fid=000100038-50-0000ARH;ext=arh;mime=;]Squash archive file
+
+# Magic ID for Boa constrictor files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	BOA\x00	[fid=000100040-50-0000B58;ext=b58;mime=;]BOA constrictor archive file
+
+# Magic ID for BWC files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	BWC	[fid=000100042-50-00000BC;ext=bc;mime=;]BWC archive file
+
+# Magic ID for Btoa files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	xbtoa5	[fid=000100043-50-0000BOO;ext=boo;mime=;]Btoa encoded file
+
+# Magic ID for BTS files.
+# Submitted on 2004-02-18 by Carl Eric Codere
+0	string	\x1A\x03Descript	[fid=000100044-50-0000BTS;ext=bts;mime=;]BTSpk archive file
+&0x521	string	BTSPK!	
+
+# Magic ID for Ctxf files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	CXF\x1A	[fid=000100045-50-0000CXF;ext=cxf;mime=;]Ctx archive file
+
+# Magic ID for Dpae files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	Dirk\ Paehl(c)	[fid=000100046-50-0000DPA;ext=dpa;mime=;]Dpae archive file
+
+# Magic ID for Disintegrator files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	DSTb	[fid=000100047-50-0000DST;ext=dst;mime=;]Disintegrator archive file
+
+# Magic ID for BMF image compressor files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	\x81\x8A0	[fid=000100048-31-0000BMF;ext=bmf;mime=;]BMF image file
+>2	string	x	, version %.1s
+>3	string	x	.%.1s
+
+# Magic ID for BMF image compressor files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	\x81\x8A2	[fid=000100048-31-0000BMF;ext=bmf;mime=;]BMF image file
+>2	string	x	, version %.1s
+>3	string	x	.%.1s
+
+# Magic ID for BMF image compressor files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	\x81\x8A1	[fid=000100048-31-0000BMF;ext=bmf;mime=;]BMF image file
+>2	string	x	, version %.1s
+>3	string	x	.%.1s
+
+# Magic ID for Enhanced compressor (ENC) files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	Ench	[fid=000100051-50-0000ENC;ext=enc;mime=;]Enhanced compressor archive file
+
+# Magic ID for Lzexe files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0x1C	string	LZ91	[fid=000100053-51-0000EXE;ext=exe;mime=;]Lzexe compressed executable file (MS-DOS)
+
+# Magic ID for Qlfc files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	\x47\x68\x69\x64\x6f	[fid=000100055-50-00000GQ;ext=gq;mime=;]Qlfc archive file
+
+# Magic ID for HYP files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	\x1AHP\x25	[fid=000100056-50-0000HYP;ext=hyp;mime=;]HYP archive file
+
+# Magic ID for HYP files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	\x1AST\x25	[fid=000100056-50-0000HYP;ext=hyp;mime=;]HYP archive file
+
+# Magic ID for Lzx files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	LZX	[fid=000100058-50-0000LZX;ext=lzx;mime=;]LZX archive file
+
+# Magic ID for High Compression Markov Predictive Coder files.
+# Submitted on 2004-02-23 by Carl Eric Codere
+0	string	PPZ2	[fid=000100061-50-0000PMZ;ext=pmz;mime=;]PPMZ2 archive file
+
+# Magic ID for Powerpacker files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	PP20	[fid=000100062-50-00000PP;ext=pp;mime=;]Powerpacker archive file
+
+# Magic ID for Stonecracker files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	S401	[fid=000100063-50-0000STC;ext=stc;mime=;]Stonecracker archive file
+>0	string	S401	, version 4.01
+
+# Magic ID for Stonecracker files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	S403	[fid=000100063-50-0000STC;ext=stc;mime=;]Stonecracker archive file
+>0	string	S403	, version 4.03
+
+# Magic ID for Stonecracker files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	S404	[fid=000100063-50-0000STC;ext=stc;mime=;]Stonecracker archive file
+>0	string	S404	, version 4.04
+
+# Magic ID for PAQ1 files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	PAQ1\x0D\x0A	[fid=000100064-50-0000PQ1;ext=pq1;mime=;]PAQ1 archive file
+
+# Magic ID for PAQ3 files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	PAQ3\x0D\x0A	[fid=000100064-50-0000PQ3;ext=pq3;mime=;]PAQ3 archive file
+
+# Magic ID for PAQ6 files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	PAQ6	[fid=000100064-50-0000PQ6;ext=pq6;mime=;]PAQ6 archive file
+
+# Magic ID for Pretty simple archiver files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	PSA\x01\x03	[fid=000100065-50-0000PSA;ext=psa;mime=;]Pretty simple archiver archive file
+
+# Magic ID for Reduq files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	rdqx	[fid=000100066-50-0000RDQ;ext=rdq;mime=;]Reduq archive file
+
+# Magic ID for SBC Archiver files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	SBC\x1E	[fid=000100067-50-0000SBC;ext=sbc;mime=;]SBC archive file
+
+# Magic ID for Semone archiver files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	SEMh	[fid=000100068-50-0000ONE;ext=one;mime=;]Semone archive file
+
+# Magic ID for YBS archiver files.
+# Submitted on 2004-02-27 by Carl Eric Codere
+0	string	YBS3	[fid=000100071-50-0000YBS;ext=ybs;mime=;]YBS archive file
+
+# Magic ID for BTPC files.
+# Submitted on 2004-03-03 by Carl Eric Codere
+0	string	btpc\ 	[fid=000100074-50-000BTPC;ext=btpc;mime=;]BTPC compressed image file
+
+# Magic ID for rzip files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	RZIP	[fid=000100076-50-00000RZ;ext=rz;mime=;]Rzip archive file
+>4	byte	x	, version %d
+>5	byte	x	.%d
+
+# Magic ID for CTW files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	leshort	12	[fid=000100077-50-0000000;ext=;mime=;]Context tree weighing (CTW) archive file
+&2	leshort	0	
+
+# Magic ID for Uharc files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	UHA	[fid=000100083-50-0000UHA;ext=uha;mime=;]UHArc archive file
+
+# Magic ID for Lpac files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	LPAC	[fid=000100084-50-0000PAC;ext=pac;mime=;]LPAC audio archive file
+
+# Magic ID for Quadra Composer files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	FORM	[fid=000100085-21-0000EMD;ext=emd;mime=;]Enhanced module music file (IFF)
+&8	string	EMOD	
+
+# Magic ID for Funktracker Gold files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	Funk	[fid=000100086-21-0000FNK;ext=fnk;mime=;]Funktracker Gold music file
+
+# Magic ID for Farandole composer files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	FAR\xFE	[fid=000100087-21-0000FAR;ext=far;mime=;]Farandole composer module music file
+>4	string	>\0	[title=%.40s]
+
+# Magic ID for Farandole Composer files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	FSM\xFE	[fid=000100087-22-0000FSM;ext=fsm;mime=;]Farandole composer audio sample file
+>4	string	x	[title=%.32s]
+
+# Magic ID for Digitrakker files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	DIST	[fid=000100088-20-0000IST;ext=ist;mime=;]Digitrakker Instrument file
+&4	byte	<2	
+
+# Magic ID for Digitrakker files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	DMDL	[fid=000100088-21-0000MDL;ext=mdl;mime=;]Digitrakker module music file
+&4	byte	<0x12	
+
+# Magic ID for Multitracker Module editor files.
+# Submitted on 2004-02-15 by Carl Eric Codere
+0	string	MTM	[fid=000100089-21-0000MTM;ext=mtm;mime=;]MultiTracker module music file
+>4	string	>\x00	[title=%.20s]
+
+# Magic ID for Liquid tracker files.
+# Submitted on 2004-03-04 by Carl Eric Codere
+0	string	Liquid Module:	[fid=000100090-21-0000LIQ;ext=liq;mime=;]Liquid tracker module music file
+&0x40	byte	0x1A	
+>0x0E	string	>\0	[title=%.30s]
+>0x2c	string	>\0	[creator=%.20s]
+
+# Magic ID for Madtracker files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	MI21	[fid=000100091-20-0000MTI;ext=mti;mime=;]Madtracker instrument file
+
+# Magic ID for Madtracker files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	MTP2	[fid=000100091-21-0000MTP;ext=mtp;mime=;]Madtracker pattern file
+
+# Magic ID for Madtracker files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	MT20	[fid=000100091-21-0000MT2;ext=mt2;mime=;]Madtracker module music file
+>42	string	x	[title=%.64s]
+>112	leshort	x	[chn=%d]
+
+# Magic ID for iNES files.
+# Submitted on 2004-03-05 by Carl Eric Codere
+0	string	SND\x1A	[fid=000100092-21-0000SND;ext=snd;mime=;]iNES emulator audio file
+&4	byte	1	, version %1.0
+>5	byte	x	[chn=%d]
+
+# Submitted on 2004-03-07 by Carl Eric Codere
+0	string	NESM\x1A	[fid=000100093-21-0000NSF;ext=nsf;mime=;]NES ripped audio file
+>5	byte	x	, version %d.0
+>0x0E	string	x	[title=%.32s]
+>0x2E	string	x	[creator=%.32s]
+
+# Magic ID for A/NES files.
+# Submitted on 2004-03-07 by Carl Eric Codere
+0	string	NESA	[fid=000100094-21-0000NSA;ext=nsa;mime=;]A/NES ripped audio file
+
+# Magic ID for SoundTool files.
+# Submitted on 2004-03-07 by Carl Eric Codere
+0	string	SOUND\x1A	[fid=000100095-22-0000SND;ext=snd;mime=;]Sound tool audio data file
+>14	leshort	x	[freq=%d]
+
+# Magic ID for The Final Musicsystem eXtended (TFMX) files.
+# Submitted on 2004-03-07 by Carl Eric Codere
+0	string	TFMX-SONG\ 	[fid=000100096-21-0000TFX;ext=tfx,tfmx;mime=;]TFMX tracker module music file
+
+# Magic ID for Ultra Tracker files.
+# Submitted on 2004-03-07 by Carl Eric Codere
+0	string	MAS_UTrack_V00	[fid=000100097-21-0000ULT;ext=ult;mime=;]Ultra Tracker module music file
+>15	string	x	[title=%.32s]
+
+# Magic ID for Flac files.
+# Submitted on 2004-03-08 by Carl Eric Codere
+0	string	fLaC	[fid=000100098-22-000FLAC;ext=flac;mime=;]Free Lossless Audio Codec raw audio file
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P7\x0A	[fid=000100100-31-0000PAM;ext=pam;mime=;]Portable arbitrary map image file
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P1	[fid=000100100-31-0000PBM;ext=pbm;mime=;]Portable bitmap image file, ascii
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P4	[fid=000100100-31-0000PBM;ext=pbm;mime=;]Portable bitmap image file, binary
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P2	[fid=000100100-31-0000PGM;ext=pgm;mime=;]Portable gray map image file, ascii
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P5	[fid=000100100-31-0000PGM;ext=pgm;mime=;]Portable gray map image file, binary
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P3	[fid=000100100-31-0000PPM;ext=ppm;mime=;]Portable pixel map image file, ascii
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-03-31 by Carl Eric Codere
+0	string	P6	[fid=000100100-31-0000PPM;ext=ppm;mime=;]Portable pixel map image file, binary
+
+# Magic ID for Imagemagick files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	id=ImageMagick	[fid=000100101-31-000MIFF;ext=miff,mif;mime=;]Imagemagick image file
+
+# Magic ID for XV files.
+# Submitted on 2004-04-01 by Carl Eric Codere
+0	string	P7\ 332	[fid=000100103-31-00000XV;ext=xv;mime=;]XV Thumbnail image file
+
+# Magic ID for Anivga toolkit files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+38	string	KR\x01\x00	[fid=000100104-31-0000COD;ext=cod;mime=;]Anivga sprite image file
+
+# Magic ID for Netpbm files.
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	MRF1	[fid=000100105-31-0000MRF;ext=mrf;mime=;]Monochrome recursive format image file
+>4	belong	x	[res=%dx
+>8	belong	x	%dx1bpp]
+
+# Submitted on 2004-04-02 by Carl Eric Codere
+0	string	FIASCO	[fid=000100107-31-0000WFA;ext=wfa;mime=;]Fractal Image And Sequence Codec image file
+
+# Magic ID for Tachyon parallel raytracer files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	BEGIN_SCENE	[fid=000100116-40-0000DAT;ext=dat;mime=;]Tachyon ray-tracer 3d model
+
+# Magic ID for Milshape 3d files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	MS3D000000	[fid=000100117-40-000MS3D;ext=ms3d;mime=;]Milkshape 3d model, binary encoded
+
+# Magic ID for Geomview files.
+# Submitted on 2004-04-12 by Carl Eric Codere
+0	string	LIST	[fid=000100118-40-000LIST;ext=list;mime=;]Geomview list of 3D models and objects
+
+# Magic ID for Freepascal compiler files.
+# Submitted on 2004-10-24 by Carl Eric Codere
+0	string	PPU0	[fid=000100120-11-0000PPU;ext=ppu,ppl,ppo,ppw,ppa,ppt;mime=;]Freepascal unit file
+>0x04	string	x	, version %.2s
+
+# Magic ID for MonkeyAudio software files.
+# Submitted on 2004-05-20 by Carl Eric Codere
+0	string	MAC\ 	[fid=000100129-22-0000APE;ext=ape;mime=;]MonkeyAudio compressed audio file
+
+# Submitted on 2004-10-29 by Carl Eric Codere
+0	string	-rom1fs-	[fid=000100121-0F-0000IMG;ext=img;mime=;]Simple ROM filesystem (ROMFS)
+>16	string	x	[title=%s]
+
+# Magic ID for Figlet files.
+# Submitted on 2004-09-01 by Carl Eric Codere
+0	string	flf2	[fid=000100122-70-0000FLF;ext=flf;mime=;]Figlet font file
+
+# Magic ID for Telix files.
+# Submitted on 2005-03-04 by Carl Eric Codere
+0	lelong	0x2e2b291a	[fid=000100126-B0-0000FON;ext=fon;mime=;]Telix phone book
+&4	leshort	1	
+
+# Magic ID for Winamp files.
+# Submitted on 2005-12-18 by Carl Eric Codere
+0	string	#EXTM3U	[fid=000100127-A0-0000M3U;ext=m3u;mime=;]M3U (WinAmp) play list file
+
+# Magic ID for Winamp files.
+# Submitted on 2005-12-18 by Carl Eric Codere
+0	string	[playlist]	[fid=000100127-A0-0000PLS;ext=pls;mime=;]Winamp Play list file, version 2
+
+# Submitted on 2007-02-26 by Nicolas Castagne
+0	string	FORM	[fid=000100128-92-0000GMS;ext=gms;mime=;]Gesture and Motion Signals file (IFF)
+&8	string	GMS	
+
+# Magic ID for Borland Turbo C++ files.
+# Submitted on 2006-09-10 by Carl Eric Codere
+0	string/c	TURBO C Help File.\x00\x1A	[fid=000001005-60-0000TCH;ext=tch;mime=;]Borland Turbo C++ for DOS Help file
+&0x14	string	$*$* &&&&$*$	
+
+# Magic ID for Turbo Pascal files.
+# Submitted on 2006-09-10 by Carl Eric Codere
+0	string/c	TURBO PASCAL HELP FILE.\x00\x1A	[fid=000001005-60-0000TPH;ext=tph;mime=;]Borland Turbo Pascal for DOS Help file
+&0x19	string	$*$* &&&&$*$	
+
+# Submitted on 2007-04-08 by Carl Eric Codere
+0	string	MFF01	[fid=000100135-00-0000MFF;ext=mff;mime=;]Multi Format File
+
+# Submitted on 2007-08-06 by Carl Eric Codere
+0	belong	<0x100	[fid=000100136-81-00003GP;ext=3gp;mime=video/3gpp;]3GPP audio/visual media stream
+&4	string	ftyp3gp6	, release 6
+
+# Submitted on 2007-08-08 by Carl Eric Codere
+0	string	FLV	[fid=000001003-81-0000FLV;ext=flv;mime=;]Adobe Flash video file
+&3	byte	<0x32	, version %.1s
+
+# Submitted on 2007-08-08 by Carl Eric Codere
+0	string	\x1A\x45\xDF\xA3	[fid=000100139-81-0000MKV;ext=mkv;mime=;]Matroska multimedia container
+&8	string	matroska	
+
+# Submitted on 2007-08-08 by Carl Eric Codere
+0	string	\x1A\x45\xDF\xA3	[fid=000100139-F9-000EBML;ext=ebml;mime=;]Extensible Binary Meta Language generic container file
+
+# Submitted on 2007-08-08 by Carl Eric Codere
+0	belong	<0x100	[fid=000100136-81-00003GP;ext=3gp;mime=video/3gpp;]3GPP audio/visual media stream
+&4	string	ftyp3gp	
+>11	string	x	, release %.1s
+
+# Magic ID for simple_encoder files.
+# Submitted on 2011-04-23 by Carl Eric Codere
+0	string	DKIF	[fid=000100142-82-0000IVF;ext=ivf;mime=;]Google Video format video
+>4	leshort	x	, version %d
+>12	leshort	x	[res=%dx
+>14	leshort	x	%d]
+
+
+# CRC32:0D598ACE
