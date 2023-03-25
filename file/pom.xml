@@ -152,6 +152,7 @@
                 <configuration>
                     <!-- Output location of api documentation -->
                     <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
+                    <detectJavaApiLink>false</detectJavaApiLink>         
                 </configuration>
                 <executions>
                     <execution>
