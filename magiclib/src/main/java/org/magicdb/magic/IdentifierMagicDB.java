@@ -37,7 +37,7 @@ import java.util.Properties;
  *  identifying data from both Input streams that supports {@link InputStream#mark(int) }
  *  or {@link RandomAccessFile}
  *
- *  <p>The following steps should be used to use this library
+ *  <p>The following steps should be used to use this library</p>
  *   <ul>
  *    <li>Call one of the constructors to create an instance of the class.</li>
  *    <li>Call {@link #initLibrary()} to parse the magic text file database </li>
@@ -46,7 +46,6 @@ import java.util.Properties;
  *    <li>Call {@link #doneLibrary()} to free allocated resources</li>
  *
  *   </ul>
- * </p>
  *
  */
 public class IdentifierMagicDB

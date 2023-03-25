@@ -52,8 +52,8 @@
 	</contributors>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.4</maven.compiler.source>
-    <maven.compiler.target>1.4</maven.compiler.target>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -144,6 +144,7 @@
         <configuration>
          <!-- Output location of api documentation -->
          <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
+         <detectJavaApiLink>false</detectJavaApiLink>         
         </configuration>
        <executions>
           <execution>
