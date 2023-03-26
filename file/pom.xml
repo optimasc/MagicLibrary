@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.magicdb.magic.application</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <!-- FIXME change it to the project's website -->
     <url></url>
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>org.magicdb.magic</groupId>
             <artifactId>magiclib</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
