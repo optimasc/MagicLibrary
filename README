@@ -1,0 +1,9 @@
+This project contains a java library and associated components and examples that permit to extract and identify files based on a 'magic' file.
+
+Today it contains the following modules/sub-projects:
+
+- magiclib: A java library that permits to identify files and extract some metadata based on a 'magic' text file.
+- file: A sample application that uses the above magic library
+
+
+
