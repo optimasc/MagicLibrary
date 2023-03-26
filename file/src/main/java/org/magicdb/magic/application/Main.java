@@ -225,6 +225,36 @@ public class Main
 
   }
 
+   /**
+    * Display (to standard output) package details for provided Package.
+    *
+    * @param pkg Package whose details need to be printed to standard output.
+    */
+   private static void displayPackageDetails(final Package pkg)
+   {
+      final String name = pkg.getName();
+      System.out.println(name);
+      System.out.println("\tSpec Title/Version: " + pkg.getSpecificationTitle() + " " + pkg.getSpecificationVersion());
+      System.out.println("\tSpec Vendor: " +  pkg.getSpecificationVendor());      System.out.println("\tImplementation: " + pkg.getImplementationTitle() + " " + pkg.getImplementationVersion());
+
+      System.out.println("\tImplementation: " + pkg.getImplementationTitle() + " " + pkg.getImplementationVersion());
+      System.out.println("\tImplementation Vendor: " + pkg.getImplementationVendor());
+   }
+
+
+  private static void dumpPackageInformation()
+  {
+ final Package[] packages = Package.getPackages();
+      for (final Package pkg : packages)
+      {
+         final String name = pkg.getName();
+         if (   !name.startsWith("sun") && !name.startsWith("java"))
+         {
+            displayPackageDetails(pkg);
+         }
+      }
+  }
+
   /** Process command line parameters and return configuration
    *  information
    *
@@ -244,6 +274,7 @@ public class Main
       System.out.println("  -r  : Recursively scan directories");
       System.out.println("  -d  : Debug mode");
       System.out.println("  -cb : Check brief (less verbose)");
+      System.out.println("  --version : Return version information on library");
       System.out
           .println("  filespec : Filemask and directory specification where to scan");
       System.out.println("Built in plugins");
@@ -259,6 +290,14 @@ public class Main
         config.debug = true;
       else if (args[i].equals("-cb"))
         config.brief = true;
+      else if (args[i].equals("--version"))
+      {
+          // Return information on the magic library implementation */
+          Package magicLibraryPackage = org.magicdb.magic.IdentifierMagicDB.class.getPackage();
+          System.out.println(magicLibraryPackage.getImplementationTitle() + " " + magicLibraryPackage.getImplementationVersion());
+          System.exit(0);
+      }
+
     }
 
     if (config.debug)
