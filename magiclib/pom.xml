@@ -5,14 +5,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.magicdb.magic</groupId>
+  <artifactId>magiclib</artifactId>
   <version>1.0.0</version>
 
-  <!-- FIXME change it to the project's website -->
+  <name>Magic library</name>
   <url></url>
-  <organization>
-     <name>Optima SC Inc.</name>
-		<url>http://www.optimasc.com</url>
-  </organization>
+  <inceptionYear>2016</inceptionYear>
+  <description>Resource identification library based on an extensible 'magic' database.</description>
+
+
   
 
   <licenses>
@@ -50,11 +51,65 @@
           </contributor>
 
 	</contributors>
+  <organization>
+     <name>Optima SC Inc.</name>
+		<url>http://www.optimasc.com</url>
+  </organization>
+
+	<!-- TODO: The repository location : This example is for ossrh-demo under 
+		user simpligility. This is used for maven central deployment. -->
+	<scm>
+		<connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
+		<developerConnection>scm:git:ssh://github.com:simpligility/ossrh-demo.git</developerConnection>
+		<url>http://github.com/simpligility/ossrh-demo/tree/master</url>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+    <!-- Define the build profiles, the default one build with JDK 1.6 runtime,
+         other one called 'jdk14' requires JDK 1.5 or 1.6 installed and active,
+         it permits to build java code with generics that outputs the JDK 1.4
+         class format. It is important to understand that JDK 1.4 and  JDK 1.7
+         will assume there are no generic types when compiling with these classes.
+         
+         See animal sniffer usage later on to ensure that the JDK 1.4 can successfully
+         run on CDC FP systems in regards to the API's.
+          -->
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
+	<finalName>${project.artifactId}-${project.version}</finalName>
   </properties>
+		</profile>
+		<profile>
+			<id>jdk14</id>
+			<properties>
+				<maven.compiler.source>1.5</maven.compiler.source>
+				<maven.compiler.target>jsr14</maven.compiler.target>
+			    <finalName>${project.artifactId}-${project.version}-jdk14</finalName>
+			</properties>
+		</profile>
+	</profiles>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
+	</properties>
 
   <dependencies>
     <dependency>
@@ -66,6 +121,7 @@
   </dependencies>
 
   <build>
+      <finalName>${finalName}</finalName>
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -77,9 +133,28 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
+
+			<!-- Permits to check against CDC FP 1.1 with JSR 280 API compatibility -->
+			<!-- Call using mvn animal-sniffer:check -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>animal-sniffer-maven-plugin</artifactId>
+				<version>1.8</version>
+				<configuration>
+					<signature>
+						<groupId>com.optimasc.signatures</groupId>
+						<artifactId>cdc11fpxml</artifactId>
+						<version>1.0-SNAPSHOT</version>
+					</signature>
+				</configuration>
+			</plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.2</version>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -96,6 +171,9 @@
 				  <classpathPrefix>../lib/</classpathPrefix>
                   <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                 </manifest>
+                  <manifestEntries>
+                    <Build_Target>${maven.compiler.target}</Build_Target>
+                  </manifestEntries>                  
             </archive>
             </configuration>          
         </plugin>
@@ -154,6 +232,12 @@
               <goal>javadoc</goal>
             </goals>
           </execution>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
         </executions>        
       </plugin>
       
@@ -164,6 +248,14 @@
 	    <configuration>
     	  <classifier>src</classifier>
     	</configuration>        
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
       </plugin>     
       
       <plugin>
@@ -187,6 +279,32 @@
         </executions>
       </plugin> 
       
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
       
       <plugin>
       <groupId>org.apache.maven.plugins</groupId>
@@ -251,8 +369,4 @@
     </plugins>
   </reporting>  
   
-  <name>Magic library</name>
-  <inceptionYear>2016</inceptionYear>
-  <artifactId>magiclib</artifactId>
-  <description>Resource identification library based on an extensible 'magic' database.</description>
 </project>
