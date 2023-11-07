@@ -6,23 +6,22 @@
 
   <groupId>org.magicdb.magic</groupId>
   <artifactId>magiclib</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 
   <name>Magic library</name>
   <url></url>
   <inceptionYear>2016</inceptionYear>
   <description>Resource identification library based on an extensible 'magic' database.</description>
 
-
-  
-
   <licenses>
    <license>
+		<!--  The license identifier, as defined by SPDX -->
         <name>Apache-1.1</name>
         <url>${project.basedir}/LICENSE.txt</url>
    </license>
   </licenses> 
   
+	<!-- List of direct developers for this project -->
    <developers>
     <developer>
       <name>Carl Eric Codere</name>
@@ -34,6 +33,7 @@
     </developer>
   </developers>
 
+	<!-- List of contributors to this project -->
 	<contributors>
             <contributor>
       <name>Paul Davis</name>
@@ -51,19 +51,21 @@
           </contributor>
 
 	</contributors>
+
+	<!-- List of organization associated with this project -->
   <organization>
      <name>Optima SC Inc.</name>
 		<url>http://www.optimasc.com</url>
   </organization>
 
-	<!-- TODO: The repository location : This example is for ossrh-demo under 
-		user simpligility. This is used for maven central deployment. -->
+	<!-- The repository locations. Private values are allowed. -->
 	<scm>
-		<connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
-		<developerConnection>scm:git:ssh://github.com:simpligility/ossrh-demo.git</developerConnection>
-		<url>http://github.com/simpligility/ossrh-demo/tree/master</url>
+		<connection>scm:git:git://github.com/optimasc/MagicLibrary.git</connection>
+		<developerConnection>scm:git:ssh://github.com/optimasc/MagicLibrary.git</developerConnection>
+		<url>https://github.com/optimasc/MagicLibrary/tree/main</url>
 	</scm>
 
+	<!-- The location where the data will be distributed. Keep as is for Sonatype Maven central -->
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -75,179 +77,71 @@
 		</repository>
 	</distributionManagement>
 
-    <!-- Define the build profiles, the default one build with JDK 1.6 runtime,
-         other one called 'jdk14' requires JDK 1.5 or 1.6 installed and active,
-         it permits to build java code with generics that outputs the JDK 1.4
-         class format. It is important to understand that JDK 1.4 and  JDK 1.7
-         will assume there are no generic types when compiling with these classes.
-         
-         See animal sniffer usage later on to ensure that the JDK 1.4 can successfully
-         run on CDC FP systems in regards to the API's.
-          -->
-	<profiles>
-		<profile>
-			<id>default</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-  <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-	<finalName>${project.artifactId}-${project.version}</finalName>
-  </properties>
-		</profile>
-		<profile>
-			<id>jdk14</id>
-			<properties>
-				<maven.compiler.source>1.5</maven.compiler.source>
-				<maven.compiler.target>jsr14</maven.compiler.target>
-			    <finalName>${project.artifactId}-${project.version}-jdk14</finalName>
-			</properties>
-		</profile>
-	</profiles>
-
 	<properties>
+		<maven.compiler.source>1.4</maven.compiler.source>
+		<maven.compiler.target>1.4</maven.compiler.target>
+		<!--  Key ID used for artifact signing -->
+		<gpg.keyname>627E3C7E</gpg.keyname>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 	</properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-  <build>
-      <finalName>${finalName}</finalName>
-      <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-
-			<!-- Permits to check against CDC FP 1.1 with JSR 280 API compatibility -->
-			<!-- Call using mvn animal-sniffer:check -->
+         
+  
+	<!-- These are the default profiles supported: 1) release: The default, which 
+		contains minimal debug information for stack tracing and debugging if source 
+		code is available. 2) archive: Used to build and generate artifacts that are 
+		for manual deployments (both through maven install) 3) debug: Uses debug classifier 
+		and contains full debug information for debug information.  
+		-->
+	<profiles>
+		<profile>
+			<id>release</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<maven.compiler.debug>true</maven.compiler.debug>
+				<maven.compiler.debuglevel>lines,source</maven.compiler.debuglevel>
+				<maven.compiler.optimize>true</maven.compiler.optimize>
+				<project.build.directory.classes>${project.build.directory}/classes</project.build.directory.classes>
+				<project.build.outputDirectory.classes.jar>${project.build.outputDirectory.classes}</project.build.outputDirectory.classes.jar>
+     		    <jar.classifier></jar.classifier>
+				<build.target>${maven.compiler.target}</build.target>
+			</properties>
+			<build>
+			<plugins>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>animal-sniffer-maven-plugin</artifactId>
-				<version>1.8</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
 				<configuration>
-					<signature>
-						<groupId>com.optimasc.signatures</groupId>
-						<artifactId>cdc11fpxml</artifactId>
-						<version>1.0-SNAPSHOT</version>
-					</signature>
+					<failOnError>false</failOnError>
 				</configuration>
-			</plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-				</configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>2.6</version>
-        	<configuration>
-            <archive>
-                <addMavenDescriptor>false</addMavenDescriptor>
-                <manifest>
-				  <addClasspath>true</addClasspath>
-				  <classpathPrefix>../lib/</classpathPrefix>
-                  <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                </manifest>
-                  <manifestEntries>
-                    <Build_Target>${maven.compiler.target}</Build_Target>
-                  </manifestEntries>                  
-            </archive>
-            </configuration>          
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.5.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.9</version>
-        </plugin>
-        
-        
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.9</version>
-        <executions>
-          <execution>
-            <id>copy-dependencies</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/lib</outputDirectory>
-              <includeScope>compile</includeScope>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <configuration>
-         <!-- Output location of api documentation -->
-         <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
-         <detectJavaApiLink>false</detectJavaApiLink>         
-        </configuration>
-       <executions>
-          <execution>
-            <id>make-assembly</id> <!-- this is used for inheritance merges -->
-            <phase>package</phase> <!-- bind to the packaging phase -->
-            <goals>
-              <goal>javadoc</goal>
-            </goals>
-          </execution>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+					</execution>
 					<execution>
 						<id>attach-javadocs</id>
 						<goals>
 							<goal>jar</goal>
 						</goals>
 					</execution>
-        </executions>        
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.0.1</version>
-	    <configuration>
-    	  <classifier>src</classifier>
-    	</configuration>        
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+				</configuration>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -256,29 +150,186 @@
 						</goals>
 					</execution>
 				</executions>
-      </plugin>     
-      
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.0.0</version>
-        <configuration>
-          <descriptors>
-            <descriptor>src/assembly/src.xml</descriptor>
-            <descriptor>src/assembly/bin.xml</descriptor>
-            <descriptor>src/assembly/doc.xml</descriptor>            
-          </descriptors>        
-        </configuration>
-        <executions>
-          <execution>
-            <id>make-assembly</id> <!-- this is used for inheritance merges -->
-            <phase>package</phase> <!-- bind to the packaging phase -->
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin> 
-      
+			</plugin>
+			</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>archive</id>
+			<properties>
+				<maven.compiler.debug>true</maven.compiler.debug>
+				<maven.compiler.debuglevel>lines,source</maven.compiler.debuglevel>
+				<maven.compiler.optimize>true</maven.compiler.optimize>
+				<project.build.directory.classes>${project.build.directory}/classes</project.build.directory.classes>
+				<project.build.outputDirectory.classes.jar>${project.build.outputDirectory.classes}</project.build.outputDirectory.classes.jar>
+     		    <jar.classifier></jar.classifier>
+				<build.target>${maven.compiler.target}</build.target>
+			</properties>
+			<build>
+			<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+					<failOnError>false</failOnError>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<descriptors>
+						<descriptor>src/assembly/src.xml</descriptor>
+						<descriptor>src/assembly/bin.xml</descriptor>
+						<descriptor>src/assembly/doc.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>debug</id>
+			<properties>
+				<maven.compiler.debug>true</maven.compiler.debug>
+				<project.build.directory.classes>${project.build.directory}/classes-debug</project.build.directory.classes>
+				<project.build.outputDirectory.classes.jar>${project.build.outputDirectory.classes}</project.build.outputDirectory.classes.jar>
+     		    <jar.classifier>debug</jar.classifier>
+				<build.target>${maven.compiler.target}</build.target>
+			</properties>
+		</profile>
+	</profiles>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.sf.retrotranslator</groupId>
+				<artifactId>retrotranslator-transformer</artifactId>
+				<version>${version.retrotranslator-transformer}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<build>
+    	<outputDirectory>${project.build.directory.classes}</outputDirectory>
+		<plugins>
+			<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+			<!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>../lib/</classpathPrefix>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+                  <manifestEntries>
+							<Build_Target>${build.target}</Build_Target>
+                  </manifestEntries>                  
+					</archive>
+					<classifier>${jar.classifier}</classifier>
+					<classesDirectory>${project.build.outputDirectory.classes.jar}</classesDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+			</plugin>
+			<!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.5.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.9</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<includeScope>compile</includeScope>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
@@ -290,6 +341,10 @@
 						<goals>
 							<goal>sign</goal>
 						</goals>
+          				<configuration>
+							<keyname>${gpg.keyname}</keyname>
+							<passphraseServerId>${gpg.keyname}</passphraseServerId>
+          				</configuration>						
 					</execution>
 				</executions>
 			</plugin>
@@ -305,68 +360,68 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-      
-      <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-pdf-plugin</artifactId>
-      <version>1.4</version>
-      <executions>
-        <execution>
-          <id>pdf</id>
-          <phase>site</phase>
-          <goals>
-            <goal>pdf</goal>
-          </goals>
-          <configuration>
-            <outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
-            <includeReports>false</includeReports>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
-              
-      </plugins>
-      
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-dependency-plugin</artifactId>
-                                        <versionRange>[2.0,)</versionRange>
-                                        <goals>
-                                            <goal>copy-dependencies</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute />
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-      
-  </build>
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <configuration>
-        </configuration>
-      </plugin>
-    </plugins>
-  </reporting>  
-  
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pdf-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>pdf</id>
+						<phase>site</phase>
+						<goals>
+							<goal>pdf</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
+							<includeReports>false</includeReports>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[2.0,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
 </project>
