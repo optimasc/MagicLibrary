@@ -6,10 +6,10 @@
 
   <groupId>org.magicdb.magic</groupId>
   <artifactId>magiclib</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0-SNAPSHOT</version>
 
   <name>Magic library</name>
-  <url></url>
+  <url>https://github.com/optimasc/MagicLibrary</url>
   <inceptionYear>2016</inceptionYear>
   <description>Resource identification library based on an extensible 'magic' database.</description>
 
